@@ -1,0 +1,828 @@
+[
+  {
+    "id": "insta-fame-mac-cheese-mug",
+    "name": "Insta-Fame Mac & Cheese Mug",
+    "ingredients": [
+      "1-2-cup-elbow-macaroni",
+      "1-2-cup-water",
+      "1-4-cup-milk",
+      "1-2-cup-shredded-cheddar-cheese",
+      "salt-and-pepper-to-taste"
+    ],
+    "requiredAppliances": [
+      "microwave"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Combine macaroni and water in a large, microwave-safe mug.",
+      "Microwave on high for 2-3 minutes, or until pasta is cooked.",
+      "Stir in milk, cheese, salt, and pepper.",
+      "Microwave for another 30-60 seconds, until cheese is melted and creamy."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "speedy-microwave-scrambled-eggs",
+    "name": "Speedy Microwave Scrambled Eggs",
+    "ingredients": [
+      "2-eggs",
+      "2-tbsp-milk",
+      "2-tbsp-shredded-cheese",
+      "salt",
+      "pepper"
+    ],
+    "requiredAppliances": [
+      "microwave"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Whisk eggs, milk, salt, and pepper in a microwave-safe mug or bowl.",
+      "Microwave for 45 seconds. Stir.",
+      "Microwave for another 30-45 seconds, until eggs are set.",
+      "Stir in cheese."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "better-than-takeout-ramen-upgrade",
+    "name": "Better-Than-Takeout Ramen Upgrade",
+    "ingredients": [
+      "1-packet-instant-ramen",
+      "1-egg",
+      "1-2-cup-frozen-peas-and-carrots",
+      "soy-sauce-or-sriracha-to-taste"
+    ],
+    "requiredAppliances": [
+      "microwave"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Place ramen, frozen veggies, and water (according to package) in a large bowl.",
+      "Microwave for 3 minutes.",
+      "Gently crack the egg into the hot broth. Let it sit for 1-2 minutes to poach.",
+      "Stir in the ramen seasoning packet and a splash of soy sauce or sriracha."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "quick-queso-dip",
+    "name": "Quick Queso Dip",
+    "ingredients": [
+      "1-2-cup-shredded-cheddar-cheese",
+      "1-4-cup-salsa",
+      "tortilla-chips-for-dipping"
+    ],
+    "requiredAppliances": [
+      "microwave"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Combine cheese and salsa in a microwave-safe bowl.",
+      "Microwave for 1-2 minutes, stirring every 30 seconds, until melted.",
+      "Serve immediately with tortilla chips."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "loaded-baked-potato",
+    "name": "Loaded Baked Potato",
+    "ingredients": [
+      "1-medium-russet-potato",
+      "1-tbsp-butter",
+      "2-tbsp-sour-cream",
+      "2-tbsp-shredded-cheese",
+      "1-tbsp-cooked-bacon-bits-optional"
+    ],
+    "requiredAppliances": [
+      "microwave"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Wash the potato and pierce it several times with a fork.",
+      "Microwave on high for 5-7 minutes, or until tender.",
+      "Slice open, fluff with a fork, and top with butter, sour cream, cheese, and bacon bits."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "dorm-room-fried-rice",
+    "name": "Dorm Room Fried Rice",
+    "ingredients": [
+      "1-cup-instant-rice",
+      "1-cup-water",
+      "1-2-cup-frozen-peas-and-carrots",
+      "1-egg-scrambled",
+      "2-tbsp-soy-sauce"
+    ],
+    "requiredAppliances": [
+      "microwave"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Cook instant rice with water in the microwave according to package directions.",
+      "Stir in frozen peas and carrots and microwave for 1 more minute.",
+      "Add the pre-scrambled egg and soy sauce, and stir to combine."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "speedy-black-bean-soup",
+    "name": "Speedy Black Bean Soup",
+    "ingredients": [
+      "1-can-black-beans",
+      "1-4-cup-salsa",
+      "pinch-of-cumin"
+    ],
+    "requiredAppliances": [
+      "microwave"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Combine all ingredients in a microwave-safe bowl.",
+      "Microwave for 2-3 minutes, until hot.",
+      "Top with shredded cheese or a dollop of sour cream if desired."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "cheesy-tuna-melt",
+    "name": "Cheesy Tuna Melt",
+    "ingredients": [
+      "1-can-tuna",
+      "1-tbsp-mayonnaise",
+      "2-slices-of-bread",
+      "1-slice-cheddar-cheese"
+    ],
+    "requiredAppliances": [
+      "microwave"
+    ],
+    "recommendedAppliances": [
+      "toaster",
+      "air-fryer",
+      "hot-plate"
+    ],
+    "instructions": [
+      "Mix tuna and mayonnaise in a small bowl.",
+      "Spread tuna mixture on one slice of bread. Top with cheese and the other slice.",
+      "Microwave for 45-60 seconds, or toast beforehand for crispier texture."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "no-boil-pasta",
+    "name": "No-Boil Pasta",
+    "ingredients": [
+      "1-2-cup-pasta",
+      "1-cup-water",
+      "1-2-cup-marinara-sauce",
+      "parmesan-cheese"
+    ],
+    "requiredAppliances": [
+      "microwave"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Combine pasta and water in a large microwave-safe bowl.",
+      "Microwave for 4-6 minutes, stirring halfway.",
+      "Drain excess water, stir in sauce, and microwave 1 more minute.",
+      "Top with parmesan."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "apple-cinnamon-baked-apples",
+    "name": "Apple Cinnamon Baked Apples",
+    "ingredients": [
+      "1-apple",
+      "1-tbsp-brown-sugar",
+      "1-2-tsp-cinnamon",
+      "1-tbsp-butter"
+    ],
+    "requiredAppliances": [
+      "microwave"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Core the apple and place in a microwave-safe bowl.",
+      "Fill the center with sugar, cinnamon, and butter.",
+      "Microwave for 3-5 minutes until tender."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "classic-caprese-salad",
+    "name": "Classic Caprese Salad",
+    "ingredients": [
+      "1-tomato",
+      "4-oz-mozzarella",
+      "fresh-basil",
+      "balsamic-glaze",
+      "olive-oil",
+      "salt",
+      "pepper"
+    ],
+    "requiredAppliances": [],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Slice the tomato and mozzarella.",
+      "Layer tomato, mozzarella, and basil.",
+      "Drizzle with glaze and oil. Season with salt and pepper."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "study-sesh-trail-mix",
+    "name": "Study-Sesh Trail Mix",
+    "ingredients": [
+      "1-cup-nuts",
+      "1-2-cup-dried-fruit",
+      "1-2-cup-chocolate-chips",
+      "1-cup-pretzels"
+    ],
+    "requiredAppliances": [],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Combine all ingredients in a container.",
+      "Shake to mix well."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "savory-avocado-toast",
+    "name": "Savory Avocado Toast",
+    "ingredients": [
+      "1-slice-bread",
+      "1-2-avocado",
+      "bagel-seasoning",
+      "red-pepper-flakes"
+    ],
+    "requiredAppliances": [],
+    "recommendedAppliances": [
+      "toaster"
+    ],
+    "instructions": [
+      "Toast the bread.",
+      "Mash avocado on toast. Sprinkle with seasoning and flakes."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "greek-yogurt-parfait",
+    "name": "Greek Yogurt Parfait",
+    "ingredients": [
+      "1-cup-greek-yogurt",
+      "1-2-cup-granola",
+      "1-2-cup-berries"
+    ],
+    "requiredAppliances": [],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Layer yogurt, granola, and berries in a glass or jar.",
+      "Repeat until full."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "no-fuss-black-bean-corn-salad",
+    "name": "No-Fuss Black Bean & Corn Salad",
+    "ingredients": [
+      "1-can-black-beans",
+      "1-can-corn",
+      "1-2-red-onion",
+      "1-avocado",
+      "juice-of-1-lime",
+      "salt",
+      "pepper"
+    ],
+    "requiredAppliances": [],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Mix all ingredients in a bowl.",
+      "Serve with chips or as a side."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "peanut-butter-banana-sushi",
+    "name": "Peanut Butter Banana Sushi",
+    "ingredients": [
+      "1-tortilla",
+      "2-tbsp-peanut-butter",
+      "1-banana"
+    ],
+    "requiredAppliances": [],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Spread peanut butter over tortilla.",
+      "Place banana on one edge and roll tightly.",
+      "Slice into 1-inch pieces."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "overnight-oats",
+    "name": "Overnight Oats",
+    "ingredients": [
+      "1-2-cup-rolled-oats",
+      "1-2-cup-milk",
+      "1-tbsp-chia-seeds",
+      "1-tbsp-honey",
+      "fruit",
+      "nuts"
+    ],
+    "requiredAppliances": [
+      "refrigerator"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Combine oats, milk, chia seeds, and sweetener in a jar.",
+      "Stir well, cover, and refrigerate overnight.",
+      "Top with fruit and nuts before serving."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "hummus-veggie-wrap",
+    "name": "Hummus & Veggie Wrap",
+    "ingredients": [
+      "1-tortilla",
+      "3-tbsp-hummus",
+      "1-2-cup-spinach",
+      "1-4-cup-shredded-carrots",
+      "1-4-cup-cucumber"
+    ],
+    "requiredAppliances": [],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Spread hummus on tortilla.",
+      "Layer spinach, carrots, and cucumber.",
+      "Roll up and slice."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "italian-tuna-salad",
+    "name": "Italian Tuna Salad",
+    "ingredients": [
+      "1-can-tuna",
+      "1-4-cup-red-onion",
+      "1-tbsp-capers",
+      "juice-of-1-2-lemon",
+      "salt",
+      "pepper"
+    ],
+    "requiredAppliances": [],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Mix tuna with onion, capers, lemon juice, salt, and pepper.",
+      "Serve with crackers or on bread."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "simple-chili",
+    "name": "Simple Chili",
+    "ingredients": [
+      "1-2-lb-ground-meat",
+      "1-can-kidney-beans",
+      "1-can-diced-tomatoes",
+      "1-tbsp-chili-powder"
+    ],
+    "requiredAppliances": [
+      "stove",
+      "hot-plate"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Brown meat and drain.",
+      "Add beans, tomatoes, and chili powder.",
+      "Simmer 10\u201315 minutes."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "easy-pesto-pasta",
+    "name": "Easy Pesto Pasta",
+    "ingredients": [
+      "1-cup-pasta",
+      "1-4-cup-pesto",
+      "1-4-cup-cherry-tomatoes",
+      "parmesan-cheese"
+    ],
+    "requiredAppliances": [
+      "stove",
+      "hot-plate"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Cook pasta, drain, reserve some water.",
+      "Stir in pesto, tomatoes, and reserved water.",
+      "Top with parmesan."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "smarter-sausage-peppers",
+    "name": "Smarter Sausage & Peppers",
+    "ingredients": [
+      "2-sausage-links",
+      "1-bell-pepper",
+      "1-2-onion",
+      "1-tbsp-olive-oil"
+    ],
+    "requiredAppliances": [
+      "stove",
+      "hot-plate"
+    ],
+    "recommendedAppliances": [
+      "air-fryer"
+    ],
+    "instructions": [
+      "Cook peppers and onions in oil until soft.",
+      "Add sausage slices and cook until heated."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "speedy-goulash",
+    "name": "Speedy Goulash",
+    "ingredients": [
+      "1-2-lb-ground-beef",
+      "1-cup-macaroni",
+      "1-can-tomato-sauce",
+      "1-2-cup-water",
+      "1-tsp-italian-seasoning"
+    ],
+    "requiredAppliances": [
+      "stove",
+      "hot-plate"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Brown beef and drain.",
+      "Add macaroni, sauce, water, and seasoning.",
+      "Simmer 15\u201320 minutes, stirring occasionally."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "air-fryer-roasted-veggies",
+    "name": "Air Fryer Roasted Veggies",
+    "ingredients": [
+      "2-cups-vegetables",
+      "1-tbsp-olive-oil",
+      "salt",
+      "pepper",
+      "garlic-powder"
+    ],
+    "requiredAppliances": [
+      "air-fryer"
+    ],
+    "recommendedAppliances": [
+      "oven"
+    ],
+    "instructions": [
+      "Toss veggies with oil and seasoning.",
+      "Air fry at 400\u00b0F for 10\u201315 minutes."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "hot-plate-grilled-cheese",
+    "name": "Hot Plate Grilled Cheese",
+    "ingredients": [
+      "2-slices-bread",
+      "2-slices-cheese",
+      "1-tbsp-butter"
+    ],
+    "requiredAppliances": [
+      "hot-plate"
+    ],
+    "recommendedAppliances": [
+      "stove",
+      "air-fryer"
+    ],
+    "instructions": [
+      "Butter bread slices and place cheese in between.",
+      "Grill on hot plate until golden and melted."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "one-pan-lemon-herb-chicken-veggies",
+    "name": "One-Pan Lemon Herb Chicken & Veggies",
+    "ingredients": [
+      "1-chicken-breast",
+      "1-cup-broccoli",
+      "1-2-lemon",
+      "1-tbsp-olive-oil",
+      "1-tsp-dried-herbs",
+      "salt",
+      "pepper"
+    ],
+    "requiredAppliances": [
+      "hot-plate"
+    ],
+    "recommendedAppliances": [
+      "stove",
+      "oven"
+    ],
+    "instructions": [
+      "Cook chicken in oil with herbs and seasonings.",
+      "Add broccoli and lemon juice. Cover and cook until tender."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "egg-roll-in-a-bowl",
+    "name": "Egg Roll in a Bowl",
+    "ingredients": [
+      "1-2-lb-ground-meat",
+      "2-cups-coleslaw-mix",
+      "2-tbsp-soy-sauce",
+      "1-tsp-ginger",
+      "1-tsp-garlic-powder"
+    ],
+    "requiredAppliances": [
+      "stove",
+      "hot-plate"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Brown meat, drain fat.",
+      "Add coleslaw mix, soy sauce, ginger, and garlic.",
+      "Stir and cook until well combined."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "perfect-pan-fried-eggs",
+    "name": "Perfect Pan-Fried Eggs",
+    "ingredients": [
+      "2-eggs",
+      "1-tbsp-butter-or-oil",
+      "salt",
+      "pepper"
+    ],
+    "requiredAppliances": [
+      "stove",
+      "hot-plate"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Heat butter or oil in pan.",
+      "Crack eggs and cook to preferred doneness.",
+      "Season with salt and pepper."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "basic-boiled-eggs",
+    "name": "Basic Boiled Eggs",
+    "ingredients": [
+      "2-3-eggs",
+      "water"
+    ],
+    "requiredAppliances": [
+      "stove",
+      "hot-plate"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Place eggs in pot and cover with water.",
+      "Boil, then cover and rest off heat 10\u201312 minutes.",
+      "Cool with cold water."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "simple-steamed-rice",
+    "name": "Simple Steamed Rice",
+    "ingredients": [
+      "1-cup-white-rice",
+      "2-cups-water",
+      "salt"
+    ],
+    "requiredAppliances": [
+      "stove",
+      "hot-plate"
+    ],
+    "recommendedAppliances": [
+      "rice-cooker"
+    ],
+    "instructions": [
+      "Rinse rice and combine with water and salt in pot.",
+      "Boil, then simmer 15\u201320 mins covered.",
+      "Let stand and fluff."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "savory-oatmeal",
+    "name": "Savory Oatmeal",
+    "ingredients": [
+      "1-2-cup-oats",
+      "1-cup-water-or-broth",
+      "1-fried-egg",
+      "soy-sauce",
+      "bagel-seasoning"
+    ],
+    "requiredAppliances": [
+      "microwave",
+      "stove",
+      "hot-plate"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Cook oats. Top with fried egg.",
+      "Drizzle with soy sauce and season."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "air-fryer-chicken-nuggets",
+    "name": "Air Fryer Chicken Nuggets",
+    "ingredients": [
+      "1-chicken-breast",
+      "1-2-cup-flour",
+      "1-egg",
+      "1-cup-breadcrumbs",
+      "salt",
+      "pepper"
+    ],
+    "requiredAppliances": [
+      "air-fryer"
+    ],
+    "recommendedAppliances": [
+      "oven"
+    ],
+    "instructions": [
+      "Bread chicken pieces using flour, egg, breadcrumbs.",
+      "Air fry at 375\u00b0F for 8\u201310 minutes, flipping halfway."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "basic-tomato-sauce",
+    "name": "Basic Tomato Sauce",
+    "ingredients": [
+      "1-can-crushed-tomatoes",
+      "2-cloves-garlic",
+      "1-tbsp-olive-oil",
+      "1-tsp-dried-herbs",
+      "salt",
+      "pepper"
+    ],
+    "requiredAppliances": [
+      "stove",
+      "hot-plate"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Saut\u00e9 garlic in oil, add tomatoes and herbs.",
+      "Simmer at least 15 minutes."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "simple-guacamole",
+    "name": "Simple Guacamole",
+    "ingredients": [
+      "2-avocados",
+      "juice-of-1-lime",
+      "1-4-cup-red-onion",
+      "1-4-cup-cilantro",
+      "salt"
+    ],
+    "requiredAppliances": [],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Mash avocados. Mix in other ingredients.",
+      "Serve immediately."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  },
+  {
+    "id": "two-ingredient-dough",
+    "name": "Two-Ingredient Dough",
+    "ingredients": [
+      "1-cup-self-rising-flour",
+      "1-cup-greek-yogurt"
+    ],
+    "requiredAppliances": [
+      "air-fryer",
+      "oven"
+    ],
+    "recommendedAppliances": [],
+    "instructions": [
+      "Mix flour and yogurt into a dough.",
+      "Knead and shape. Bake at 375\u00b0F for 12\u201315 minutes."
+    ],
+    "tags": [],
+    "author": "system",
+    "version": 1,
+    "created": "2025-06-14"
+  }
+]

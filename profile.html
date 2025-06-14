@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Kitchen Profile - WhatCanICook</title>
+  <!-- Link to main stylesheet -->
+  <link rel="stylesheet" href="./src/styles/main.css" />
+</head>
+<body>
+  <!-- Header with page title -->
+  <header>
+    <h1 class="main-title">My Kitchen Profile</h1>
+  </header>
+
+  <!-- User Profile Section -->
+  <section id="user-profile-section">
+    <h2>My Kitchen Appliances</h2>
+    <!-- Appliances tab content (always active on this page) -->
+    <div id="appliances-tab" class="tab-content active">
+      <!-- Category filter buttons -->
+      <div class="appliance-categories">
+        <!-- Category buttons will be added by JavaScript -->
+      </div>
+      
+      <!-- Grid of appliance checkboxes -->
+      <div class="appliance-grid">
+        <!-- Appliance checkboxes will be added by JavaScript -->
+      </div>
+    </div>
+
+    <!-- Actions for the profile page -->
+    <div class="profile-actions">
+      <!-- Back button returns to main page without saving -->
+      <a href="index.html" class="back-btn">Back to Main</a>
+      <!-- Save button persists changes and returns to main page -->
+      <button id="save-profile" class="save-btn">Save Profile</button>
+    </div>
+  </section>
+
+  <!-- Profile page script -->
+  <script src="./src/profile.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhatCanICook</title>
+  <!-- Link to main stylesheet -->
+  <link rel="stylesheet" href="./src/styles/main.css" />
+</head>
+<body>
+  <!-- Header with app title and navigation -->
+  <header>
+    <h1 class="main-title">What Can I Cook?</h1>
+    <div class="nav-links">
+      <!-- Profile icon links to the kitchen profile page -->
+      <a href="profile.html" class="profile-icon" title="My Kitchen Profile">P</a>
+    </div>
+  </header>
+
+  <!-- Main ingredient selection section -->
+  <section id="ingredient-section">
+    <h2>My Ingredients</h2>
+
+    <!-- Form for ingredient selection dropdown -->
+    <form id="ingredient-form">
+      <select id="ingredient-select" required>
+        <option value="">Select ingredient...</option>
+        <!-- Options will be populated by JavaScript -->
+        <option value="manual">+ Add new ingredient</option>
+      </select>
+      <button type="submit">Add Ingredient</button>
+    </form>
+
+    <!-- List of user's selected ingredients -->
+    <ul id="ingredient-list"></ul>
+    
+    <!-- Find recipes button -->
+    <div class="find-recipes-container">
+      <button id="find-recipes-btn" class="find-recipes-btn">Find Recipes</button>
+    </div>
+  </section>
+
+  <!-- Recipe Results Section -->
+  <section id="recipe-results">
+    <!-- Recipe cards will be populated here -->
+  </section>
+
+  <!-- Recipe detail modal (hidden by default) -->
+  <div id="recipe-modal" class="recipe-modal" style="display: none;">
+    <div class="recipe-modal-content">
+      <button class="close-modal">&times;</button>
+      <div id="recipe-detail-content"></div>
+    </div>
+  </div>
+
+  <!-- Popup for manually adding new ingredients -->
+  <div id="manual-ingredient-popup" class="popup-overlay" style="display: none;">
+    <div class="popup-content">
+      <h3>Add New Ingredient</h3>
+      <form id="manual-ingredient-form">
+        <!-- Ingredient name input -->
+        <div class="form-group">
+          <label for="new-ingredient-name">Ingredient Name:</label>
+          <input type="text" id="new-ingredient-name" required />
+        </div>
+        
+        <!-- Category selection radio buttons -->
+        <div class="form-group">
+          <label>Category:</label>
+          <div class="radio-group" id="category-radio-group">
+            <!-- Radio buttons will be populated by JavaScript -->
+            <label><input type="radio" name="category" value="Dairy" /> Dairy</label>
+            <label><input type="radio" name="category" value="Spices & Herbs" /> Spices & Herbs</label>
+          </div>
+        </div>
+        
+        <!-- Form action buttons -->
+        <div class="form-buttons">
+          <button type="submit">Add Ingredient</button>
+          <button type="button" id="cancel-manual">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main script file -->
+  <script src="./src/main.js" type="module"></script>
+  <script src="./src/logic/matchRecipes.js" type="module"></script>
+</body>
+</html>
