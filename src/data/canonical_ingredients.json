@@ -1,0 +1,317 @@
+{
+  "pasta": {
+    "aliases": ["elbow macaroni", "macaroni", "rotini", "penne", "fusilli", "spaghetti", "noodles", "shells"],
+    "type": "Grain",
+    "substitutes": ["rice", "couscous", "quinoa"]
+  },
+  "egg": {
+    "aliases": ["eggs", "egg scrambled", "boiled egg", "fried egg"],
+    "type": "Protein",
+    "substitutes": ["tofu", "flax seed"]
+  },
+  "cheese": {
+    "aliases": [],
+    "type": "Dairy",
+    "substitutes": ["nutritional yeast", "tofu"]
+  },
+  "cheddar cheese": {
+    "aliases": ["shredded cheddar cheese", "shredded cheddar"],
+    "type": "Dairy",
+    "substitutes": ["american cheese", "monterey jack", "colby"]
+  },
+  "shredded cheese": {
+    "aliases": ["shredded cheese blend"],
+    "type": "Dairy",
+    "substitutes": ["shredded cheddar cheese", "shredded mozzarella"]
+  },
+  "mozzarella": {
+    "aliases": ["shredded mozzarella"],
+    "type": "Dairy",
+    "substitutes": ["provolone", "fontina"]
+  },
+  "parmesan cheese": {
+    "aliases": ["parmesan", "grated parmesan"],
+    "type": "Dairy",
+    "substitutes": ["pecorino romano", "asiago"]
+  },
+  "milk": {
+    "aliases": ["whole milk", "2% milk", "skim milk"],
+    "type": "Dairy",
+    "substitutes": ["plant milk", "almond milk", "soy milk", "oat milk"]
+  },
+  "butter": {
+    "aliases": [],
+    "type": "Dairy",
+    "substitutes": ["margarine", "olive oil"]
+  },
+  "rice": {
+    "aliases": ["white rice", "instant rice"],
+    "type": "Grain",
+    "substitutes": ["quinoa", "couscous", "bulgur"]
+  },
+  "brown rice": {
+    "aliases": [],
+    "type": "Grain",
+    "substitutes": ["wild rice", "quinoa"]
+  },
+  "bread": {
+    "aliases": ["white bread", "whole wheat bread", "bread slices"],
+    "type": "Grain",
+    "substitutes": ["rolls", "buns"]
+  },
+  "potato": {
+    "aliases": ["russet potato", "medium russet potato", "yellow potato", "gold potato"],
+    "type": "Vegetable",
+    "substitutes": ["sweet potato"]
+  },
+  "sweet potato": {
+    "aliases": [],
+    "type": "Vegetable",
+    "substitutes": ["potato", "butternut squash"]
+  },
+  "black beans": {
+    "aliases": ["canned black beans"],
+    "type": "Protein",
+    "substitutes": ["pinto beans", "kidney beans"]
+  },
+  "kidney beans": {
+    "aliases": ["canned kidney beans", "red beans"],
+    "type": "Protein",
+    "substitutes": ["black beans", "pinto beans"]
+  },
+  "ground beef": {
+    "aliases": [],
+    "type": "Protein",
+    "substitutes": ["ground turkey", "ground chicken"]
+  },
+  "chicken breast": {
+    "aliases": [],
+    "type": "Protein",
+    "substitutes": ["chicken thighs", "turkey breast"]
+  },
+  "tuna": {
+    "aliases": ["canned tuna"],
+    "type": "Protein",
+    "substitutes": ["canned salmon", "canned chicken"]
+  },
+  "tomato": {
+    "aliases": [],
+    "type": "Vegetable",
+    "substitutes": ["cherry tomatoes", "canned diced tomatoes"]
+  },
+  "salsa": {
+    "aliases": [],
+    "type": "Condiments",
+    "substitutes": ["diced tomatoes with green chilies", "pico de gallo"]
+  },
+  "marinara sauce": {
+    "aliases": ["pasta sauce", "tomato sauce"],
+    "type": "Condiments",
+    "substitutes": ["crushed tomatoes", "tomato paste with water"]
+  },
+  "soy sauce": {
+    "aliases": [],
+    "type": "Condiments",
+    "substitutes": ["tamari", "coconut aminos", "worcestershire sauce"]
+  },
+  "sriracha": {
+    "aliases": ["hot sauce"],
+    "type": "Condiments",
+    "substitutes": ["chili sauce", "chili paste", "tabasco"]
+  },
+  "apple": {
+    "aliases": [],
+    "type": "Fruit",
+    "substitutes": ["pear", "peach"]
+  },
+  "banana": {
+    "aliases": [],
+    "type": "Fruit",
+    "substitutes": ["plantain"]
+  },
+  "berries": {
+    "aliases": ["mixed berries"],
+    "type": "Fruit",
+    "substitutes": ["strawberries", "blueberries", "raspberries"]
+  },
+  "flour": {
+    "aliases": ["all-purpose flour"],
+    "type": "Grain",
+    "substitutes": ["whole wheat flour", "bread flour"]
+  },
+  "self rising flour": {
+    "aliases": [],
+    "type": "Grain",
+    "substitutes": ["flour with baking powder and salt"]
+  },
+  "avocado": {
+    "aliases": [],
+    "type": "Fruit",
+    "substitutes": ["guacamole"]
+  },
+  "onion": {
+    "aliases": ["yellow onion", "white onion"],
+    "type": "Vegetable",
+    "substitutes": ["shallots", "leeks"]
+  },
+  "red onion": {
+    "aliases": [],
+    "type": "Vegetable",
+    "substitutes": ["onion", "shallots"]
+  },
+  "garlic": {
+    "aliases": ["garlic cloves"],
+    "type": "Vegetable",
+    "substitutes": ["garlic powder", "shallots"]
+  },
+  "garlic powder": {
+    "aliases": [],
+    "type": "Spices",
+    "substitutes": ["garlic", "minced garlic"]
+  },
+  "broccoli": {
+    "aliases": [],
+    "type": "Vegetable",
+    "substitutes": ["cauliflower", "brussels sprouts"]
+  },
+  "salt": {
+    "aliases": ["sea salt", "kosher salt"],
+    "type": "Spices",
+    "substitutes": ["salt substitute", "seasoned salt"]
+  },
+  "pepper": {
+    "aliases": ["black pepper", "ground pepper", "pepper to taste"],
+    "type": "Spices",
+    "substitutes": ["white pepper"]
+  },
+  "olive oil": {
+    "aliases": ["extra virgin olive oil"],
+    "type": "Condiments",
+    "substitutes": ["vegetable oil", "canola oil", "avocado oil"]
+  },
+  "vegetable oil": {
+    "aliases": [],
+    "type": "Condiments",
+    "substitutes": ["canola oil", "olive oil", "sunflower oil"]
+  },
+  "mayonnaise": {
+    "aliases": ["mayo"],
+    "type": "Condiments",
+    "substitutes": ["greek yogurt", "sour cream"]
+  },
+  "frozen peas and carrots": {
+    "aliases": ["mixed vegetables"],
+    "type": "Vegetable",
+    "substitutes": ["fresh peas and carrots", "frozen mixed vegetables"]
+  },
+  "yogurt": {
+    "aliases": [],
+    "type": "Dairy",
+    "substitutes": ["sour cream", "greek yogurt"]
+  },
+  "greek yogurt": {
+    "aliases": [],
+    "type": "Dairy",
+    "substitutes": ["yogurt", "sour cream"]
+  },
+  "instant ramen": {
+    "aliases": ["packet instant ramen", "ramen noodles"],
+    "type": "Grain",
+    "substitutes": ["udon noodles", "rice noodles"]
+  },
+  "granola": {
+    "aliases": [],
+    "type": "Grain",
+    "substitutes": ["oats", "muesli", "cereal"]
+  },
+  "tortilla": {
+    "aliases": ["flour tortilla"],
+    "type": "Grain",
+    "substitutes": ["pita bread", "flatbread"]
+  },
+  "tortilla chips": {
+    "aliases": ["corn chips"],
+    "type": "Grain",
+    "substitutes": ["pita chips", "crackers"]
+  },
+  "nuts": {
+    "aliases": ["mixed nuts"],
+    "type": "Protein",
+    "substitutes": ["seeds", "roasted chickpeas"]
+  },
+  "sour cream": {
+    "aliases": [],
+    "type": "Dairy",
+    "substitutes": ["greek yogurt", "crème fraîche"]
+  },
+  "oats": {
+    "aliases": ["rolled oats"],
+    "type": "Grain",
+    "substitutes": ["quick oats", "steel-cut oats"]
+  },
+  "brown sugar": {
+    "aliases": [],
+    "type": "Misc",
+    "substitutes": ["white sugar with molasses", "coconut sugar", "honey"]
+  },
+  "italian seasoning": {
+    "aliases": ["dried herbs"],
+    "type": "Spices",
+    "substitutes": ["mix of basil, oregano, thyme, rosemary"]
+  },
+  "hummus": {
+    "aliases": [],
+    "type": "Condiments",
+    "substitutes": ["bean dip", "white bean spread"]
+  },
+  "cucumber": {
+    "aliases": [],
+    "type": "Vegetable",
+    "substitutes": ["zucchini", "celery"]
+  },
+  "spinach": {
+    "aliases": [],
+    "type": "Vegetable",
+    "substitutes": ["kale", "arugula", "lettuce"]
+  },
+  "corn": {
+    "aliases": ["canned corn", "frozen corn"],
+    "type": "Vegetable",
+    "substitutes": ["peas", "edamame"]
+  },
+  "chili powder": {
+    "aliases": [],
+    "type": "Spices",
+    "substitutes": ["paprika with cayenne", "taco seasoning"]
+  },
+  "cumin": {
+    "aliases": [],
+    "type": "Spices",
+    "substitutes": ["coriander", "caraway seeds"]
+  },
+  "cinnamon": {
+    "aliases": [],
+    "type": "Spices",
+    "substitutes": ["nutmeg", "allspice"]
+  },
+  "balsamic glaze": {
+    "aliases": ["balsamic reduction"],
+    "type": "Condiments",
+    "substitutes": ["balsamic vinegar reduced with honey"]
+  },
+  "pesto": {
+    "aliases": [],
+    "type": "Condiments",
+    "substitutes": ["basil and olive oil", "sun-dried tomato spread"]
+  },
+  "chocolate chips": {
+    "aliases": [],
+    "type": "Misc",
+    "substitutes": ["chopped chocolate", "chocolate chunks"]
+  },
+  "honey": {
+    "aliases": [],
+    "type": "Condiments",
+    "substitutes": ["maple syrup", "agave nectar"]
+  }
+}

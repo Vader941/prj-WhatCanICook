@@ -2,19 +2,12 @@
   {
     "id": "insta-fame-mac-cheese-mug",
     "name": "Insta-Fame Mac & Cheese Mug",
-    "ingredients": [
-      "1-2-cup-elbow-macaroni",
-      "1-2-cup-water",
-      "1-4-cup-milk",
-      "1-2-cup-shredded-cheddar-cheese",
-      "salt-and-pepper-to-taste"
-    ],
     "requiredAppliances": [
       "microwave"
     ],
     "recommendedAppliances": [],
     "instructions": [
-      "Combine macaroni and water in a large, microwave-safe mug.",
+      "Combine macaroni and 1/2 cup water in a large, microwave-safe mug.",
       "Microwave on high for 2-3 minutes, or until pasta is cooked.",
       "Stir in milk, cheese, salt, and pepper.",
       "Microwave for another 30-60 seconds, until cheese is melted and creamy."
@@ -22,18 +15,35 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1/2 cup",
+        "ingredient": "elbow macaroni"
+      },
+
+      {
+        "amount": "1/4 cup",
+        "ingredient": "milk"
+      },
+      {
+        "amount": "1/2 cup shreded",
+        "ingredient": "cheddar cheese"
+      },
+      {
+        "amount": "pinch",
+        "ingredient": "salt"
+      },
+      {
+        "amount": "pinch",
+        "ingredient": "pepper"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "speedy-microwave-scrambled-eggs",
     "name": "Speedy Microwave Scrambled Eggs",
-    "ingredients": [
-      "2-eggs",
-      "2-tbsp-milk",
-      "2-tbsp-shredded-cheese",
-      "salt",
-      "pepper"
-    ],
     "requiredAppliances": [
       "microwave"
     ],
@@ -47,17 +57,34 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "2",
+        "ingredient": "egg"
+      },
+      {
+        "amount": "2 tbsp",
+        "ingredient": "milk"
+      },
+      {
+        "amount": "2 tbsp shreded",
+        "ingredient": "cheese"
+      },
+      {
+        "amount": "",
+        "ingredient": "salt"
+      },
+      {
+        "amount": "",
+        "ingredient": "pepper"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "better-than-takeout-ramen-upgrade",
     "name": "Better-Than-Takeout Ramen Upgrade",
-    "ingredients": [
-      "1-packet-instant-ramen",
-      "1-egg",
-      "1-2-cup-frozen-peas-and-carrots",
-      "soy-sauce-or-sriracha-to-taste"
-    ],
     "requiredAppliances": [
       "microwave"
     ],
@@ -71,16 +98,30 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1",
+        "ingredient": "packet instant ramen"
+      },
+      {
+        "amount": "1",
+        "ingredient": "egg"
+      },
+      {
+        "amount": "1/2 cup",
+        "ingredient": "frozen peas and carrots"
+      },
+      {
+        "amount": "",
+        "ingredient": "soy sauce or sriracha to taste"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "quick-queso-dip",
     "name": "Quick Queso Dip",
-    "ingredients": [
-      "1-2-cup-shredded-cheddar-cheese",
-      "1-4-cup-salsa",
-      "tortilla-chips-for-dipping"
-    ],
     "requiredAppliances": [
       "microwave"
     ],
@@ -93,18 +134,28 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1/2 cup",
+        "ingredient": "shredded cheddar cheese"
+      },
+      {
+        "amount": "1/4 cup",
+        "ingredient": "salsa"
+      }
+
+    ],
+    "recommendedIngredients": [
+            {
+        "amount": "",
+        "ingredient": "tortilla chips"
+      }
+    ]
   },
   {
     "id": "loaded-baked-potato",
     "name": "Loaded Baked Potato",
-    "ingredients": [
-      "1-medium-russet-potato",
-      "1-tbsp-butter",
-      "2-tbsp-sour-cream",
-      "2-tbsp-shredded-cheese",
-      "1-tbsp-cooked-bacon-bits-optional"
-    ],
     "requiredAppliances": [
       "microwave"
     ],
@@ -117,40 +168,73 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1",
+        "ingredient": "medium russet potato"
+      },
+      {
+        "amount": "1 tbsp",
+        "ingredient": "butter"
+      },
+      {
+        "amount": "2 tbsp",
+        "ingredient": "sour cream"
+      },
+      {
+        "amount": "2 tbsp",
+        "ingredient": "shredded cheese"
+      }
+    ],
+    "recommendedIngredients": [
+      {
+        "amount": "1 tbsp",
+        "ingredient": "cooked bacon bits"
+      }
+    ]
   },
   {
     "id": "dorm-room-fried-rice",
     "name": "Dorm Room Fried Rice",
-    "ingredients": [
-      "1-cup-instant-rice",
-      "1-cup-water",
-      "1-2-cup-frozen-peas-and-carrots",
-      "1-egg-scrambled",
-      "2-tbsp-soy-sauce"
-    ],
     "requiredAppliances": [
       "microwave"
     ],
     "recommendedAppliances": [],
     "instructions": [
-      "Cook instant rice with water in the microwave according to package directions.",
+      "Cook instant rice with 1 cup water in the microwave according to package directions.",
       "Stir in frozen peas and carrots and microwave for 1 more minute.",
+      "Scramble 1 egg in a separate bowl and microwave for 30 seconds until set.",
       "Add the pre-scrambled egg and soy sauce, and stir to combine."
     ],
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1 cup",
+        "ingredient": "instant rice"
+      },
+
+      {
+        "amount": "1/2 cup",
+        "ingredient": "frozen peas and carrots"
+      },
+      {
+        "amount": "1",
+        "ingredient": "egg"
+      },
+      {
+        "amount": "2 tbsp",
+        "ingredient": "soy sauce"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "speedy-black-bean-soup",
     "name": "Speedy Black Bean Soup",
-    "ingredients": [
-      "1-can-black-beans",
-      "1-4-cup-salsa",
-      "pinch-of-cumin"
-    ],
     "requiredAppliances": [
       "microwave"
     ],
@@ -163,24 +247,33 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1 can",
+        "ingredient": "black beans"
+      },
+      {
+        "amount": "1/4 cup",
+        "ingredient": "salsa"
+      },
+      {
+        "amount": "pinch",
+        "ingredient": "cumin"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "cheesy-tuna-melt",
     "name": "Cheesy Tuna Melt",
-    "ingredients": [
-      "1-can-tuna",
-      "1-tbsp-mayonnaise",
-      "2-slices-of-bread",
-      "1-slice-cheddar-cheese"
-    ],
     "requiredAppliances": [
       "microwave"
     ],
     "recommendedAppliances": [
       "toaster",
-      "air-fryer",
-      "hot-plate"
+      "air fryer",
+      "hot plate"
     ],
     "instructions": [
       "Mix tuna and mayonnaise in a small bowl.",
@@ -190,23 +283,36 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1 can",
+        "ingredient": "tuna"
+      },
+      {
+        "amount": "1 tbsp",
+        "ingredient": "mayonnaise"
+      },
+      {
+        "amount": "2 slices",
+        "ingredient": "bread"
+      },
+      {
+        "amount": "1 slice",
+        "ingredient": "cheddar cheese"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "no-boil-pasta",
     "name": "No-Boil Pasta",
-    "ingredients": [
-      "1-2-cup-pasta",
-      "1-cup-water",
-      "1-2-cup-marinara-sauce",
-      "parmesan-cheese"
-    ],
     "requiredAppliances": [
       "microwave"
     ],
     "recommendedAppliances": [],
     "instructions": [
-      "Combine pasta and water in a large microwave-safe bowl.",
+      "Combine pasta and 1 cup water in a large microwave-safe bowl.",
       "Microwave for 4-6 minutes, stirring halfway.",
       "Drain excess water, stir in sauce, and microwave 1 more minute.",
       "Top with parmesan."
@@ -214,17 +320,27 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1/2 cup",
+        "ingredient": "pasta"
+      },
+
+      {
+        "amount": "1/2 cup",
+        "ingredient": "marinara sauce"
+      },
+      {
+        "amount": "",
+        "ingredient": "parmesan cheese"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "apple-cinnamon-baked-apples",
     "name": "Apple Cinnamon Baked Apples",
-    "ingredients": [
-      "1-apple",
-      "1-tbsp-brown-sugar",
-      "1-2-tsp-cinnamon",
-      "1-tbsp-butter"
-    ],
     "requiredAppliances": [
       "microwave"
     ],
@@ -237,20 +353,30 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1",
+        "ingredient": "apple"
+      },
+      {
+        "amount": "1 tbsp",
+        "ingredient": "brown sugar"
+      },
+      {
+        "amount": "1/2 tsp",
+        "ingredient": "cinnamon"
+      },
+      {
+        "amount": "1 tbsp",
+        "ingredient": "butter"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "classic-caprese-salad",
     "name": "Classic Caprese Salad",
-    "ingredients": [
-      "1-tomato",
-      "4-oz-mozzarella",
-      "fresh-basil",
-      "balsamic-glaze",
-      "olive-oil",
-      "salt",
-      "pepper"
-    ],
     "requiredAppliances": [],
     "recommendedAppliances": [],
     "instructions": [
@@ -261,17 +387,42 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1",
+        "ingredient": "tomato"
+      },
+      {
+        "amount": "4 oz",
+        "ingredient": "mozzarella"
+      },
+      {
+        "amount": "",
+        "ingredient": "fresh basil"
+      },
+      {
+        "amount": "",
+        "ingredient": "balsamic glaze"
+      },
+      {
+        "amount": "",
+        "ingredient": "olive oil"
+      },
+      {
+        "amount": "",
+        "ingredient": "salt"
+      },
+      {
+        "amount": "",
+        "ingredient": "pepper"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "study-sesh-trail-mix",
     "name": "Study-Sesh Trail Mix",
-    "ingredients": [
-      "1-cup-nuts",
-      "1-2-cup-dried-fruit",
-      "1-2-cup-chocolate-chips",
-      "1-cup-pretzels"
-    ],
     "requiredAppliances": [],
     "recommendedAppliances": [],
     "instructions": [
@@ -281,17 +432,30 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1 cup",
+        "ingredient": "nuts"
+      },
+      {
+        "amount": "1/2 cup",
+        "ingredient": "dried fruit"
+      },
+      {
+        "amount": "1/2 cup",
+        "ingredient": "chocolate chips"
+      },
+      {
+        "amount": "1 cup",
+        "ingredient": "pretzels"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "savory-avocado-toast",
     "name": "Savory Avocado Toast",
-    "ingredients": [
-      "1-slice-bread",
-      "1-2-avocado",
-      "bagel-seasoning",
-      "red-pepper-flakes"
-    ],
     "requiredAppliances": [],
     "recommendedAppliances": [
       "toaster"
@@ -303,16 +467,30 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1 slice",
+        "ingredient": "bread"
+      },
+      {
+        "amount": "1/2",
+        "ingredient": "avocado"
+      },
+      {
+        "amount": "",
+        "ingredient": "bagel seasoning"
+      },
+      {
+        "amount": "",
+        "ingredient": "red pepper flakes"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "greek-yogurt-parfait",
     "name": "Greek Yogurt Parfait",
-    "ingredients": [
-      "1-cup-greek-yogurt",
-      "1-2-cup-granola",
-      "1-2-cup-berries"
-    ],
     "requiredAppliances": [],
     "recommendedAppliances": [],
     "instructions": [
@@ -322,20 +500,26 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1 cup",
+        "ingredient": "greek yogurt"
+      },
+      {
+        "amount": "1/2 cup",
+        "ingredient": "granola"
+      },
+      {
+        "amount": "1/2 cup",
+        "ingredient": "berries"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "no-fuss-black-bean-corn-salad",
     "name": "No-Fuss Black Bean & Corn Salad",
-    "ingredients": [
-      "1-can-black-beans",
-      "1-can-corn",
-      "1-2-red-onion",
-      "1-avocado",
-      "juice-of-1-lime",
-      "salt",
-      "pepper"
-    ],
     "requiredAppliances": [],
     "recommendedAppliances": [],
     "instructions": [
@@ -345,16 +529,42 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1 can",
+        "ingredient": "black beans"
+      },
+      {
+        "amount": "1 can",
+        "ingredient": "corn"
+      },
+      {
+        "amount": "1/2",
+        "ingredient": "red onion"
+      },
+      {
+        "amount": "1",
+        "ingredient": "avocado"
+      },
+      {
+        "amount": "1",
+        "ingredient": "juice of lime"
+      },
+      {
+        "amount": "",
+        "ingredient": "salt"
+      },
+      {
+        "amount": "",
+        "ingredient": "pepper"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "peanut-butter-banana-sushi",
     "name": "Peanut Butter Banana Sushi",
-    "ingredients": [
-      "1-tortilla",
-      "2-tbsp-peanut-butter",
-      "1-banana"
-    ],
     "requiredAppliances": [],
     "recommendedAppliances": [],
     "instructions": [
@@ -365,19 +575,26 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1",
+        "ingredient": "tortilla"
+      },
+      {
+        "amount": "2 tbsp",
+        "ingredient": "peanut butter"
+      },
+      {
+        "amount": "1",
+        "ingredient": "banana"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "overnight-oats",
     "name": "Overnight Oats",
-    "ingredients": [
-      "1-2-cup-rolled-oats",
-      "1-2-cup-milk",
-      "1-tbsp-chia-seeds",
-      "1-tbsp-honey",
-      "fruit",
-      "nuts"
-    ],
     "requiredAppliances": [
       "refrigerator"
     ],
@@ -390,18 +607,40 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1/2 cup",
+        "ingredient": "rolled oats"
+      },
+      {
+        "amount": "1/2 cup",
+        "ingredient": "milk"
+      },
+      {
+        "amount": "1 tbsp",
+        "ingredient": "chia seeds"
+      },
+      {
+        "amount": "1 tbsp",
+        "ingredient": "honey"
+      }
+
+    ],
+    "recommendedIngredients": [
+            {
+        "amount": "",
+        "ingredient": "fruit"
+      },
+      {
+        "amount": "",
+        "ingredient": "nuts"
+      }
+    ]
   },
   {
     "id": "hummus-veggie-wrap",
     "name": "Hummus & Veggie Wrap",
-    "ingredients": [
-      "1-tortilla",
-      "3-tbsp-hummus",
-      "1-2-cup-spinach",
-      "1-4-cup-shredded-carrots",
-      "1-4-cup-cucumber"
-    ],
     "requiredAppliances": [],
     "recommendedAppliances": [],
     "instructions": [
@@ -412,19 +651,34 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1",
+        "ingredient": "tortilla"
+      },
+      {
+        "amount": "3 tbsp",
+        "ingredient": "hummus"
+      },
+      {
+        "amount": "1/2 cup",
+        "ingredient": "spinach"
+      },
+      {
+        "amount": "1/4 cup",
+        "ingredient": "shredded carrots"
+      },
+      {
+        "amount": "1/4 cup",
+        "ingredient": "cucumber"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "italian-tuna-salad",
     "name": "Italian Tuna Salad",
-    "ingredients": [
-      "1-can-tuna",
-      "1-4-cup-red-onion",
-      "1-tbsp-capers",
-      "juice-of-1-2-lemon",
-      "salt",
-      "pepper"
-    ],
     "requiredAppliances": [],
     "recommendedAppliances": [],
     "instructions": [
@@ -434,20 +688,41 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1 can",
+        "ingredient": "tuna"
+      },
+      {
+        "amount": "1/4 cup",
+        "ingredient": "red onion"
+      },
+      {
+        "amount": "1 tbsp",
+        "ingredient": "capers"
+      },
+      {
+        "amount": "1/2",
+        "ingredient": "juice of lemon"
+      },
+      {
+        "amount": "",
+        "ingredient": "salt"
+      },
+      {
+        "amount": "",
+        "ingredient": "pepper"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "simple-chili",
     "name": "Simple Chili",
-    "ingredients": [
-      "1-2-lb-ground-meat",
-      "1-can-kidney-beans",
-      "1-can-diced-tomatoes",
-      "1-tbsp-chili-powder"
-    ],
     "requiredAppliances": [
       "stove",
-      "hot-plate"
+      "hot plate"
     ],
     "recommendedAppliances": [],
     "instructions": [
@@ -458,20 +733,33 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1 lb",
+        "ingredient": "ground beef"
+      },
+      {
+        "amount": "1 can",
+        "ingredient": "kidney beans"
+      },
+      {
+        "amount": "1 can",
+        "ingredient": "diced tomatoes"
+      },
+      {
+        "amount": "1 tbsp",
+        "ingredient": "chili powder"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "easy-pesto-pasta",
     "name": "Easy Pesto Pasta",
-    "ingredients": [
-      "1-cup-pasta",
-      "1-4-cup-pesto",
-      "1-4-cup-cherry-tomatoes",
-      "parmesan-cheese"
-    ],
     "requiredAppliances": [
       "stove",
-      "hot-plate"
+      "hot plate"
     ],
     "recommendedAppliances": [],
     "instructions": [
@@ -482,23 +770,36 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1 cup",
+        "ingredient": "pasta"
+      },
+      {
+        "amount": "1/4 cup",
+        "ingredient": "pesto"
+      },
+      {
+        "amount": "1/4 cup",
+        "ingredient": "cherry tomatoes"
+      },
+      {
+        "amount": "",
+        "ingredient": "parmesan cheese"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "smarter-sausage-peppers",
     "name": "Smarter Sausage & Peppers",
-    "ingredients": [
-      "2-sausage-links",
-      "1-bell-pepper",
-      "1-2-onion",
-      "1-tbsp-olive-oil"
-    ],
     "requiredAppliances": [
       "stove",
-      "hot-plate"
+      "hot plate"
     ],
     "recommendedAppliances": [
-      "air-fryer"
+      "air fryer"
     ],
     "instructions": [
       "Cook peppers and onions in oil until soft.",
@@ -507,45 +808,69 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "2",
+        "ingredient": "sausage links"
+      },
+      {
+        "amount": "1",
+        "ingredient": "bell pepper"
+      },
+      {
+        "amount": "1/2",
+        "ingredient": "onion"
+      },
+      {
+        "amount": "1 tbsp",
+        "ingredient": "olive oil"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "speedy-goulash",
     "name": "Speedy Goulash",
-    "ingredients": [
-      "1-2-lb-ground-beef",
-      "1-cup-macaroni",
-      "1-can-tomato-sauce",
-      "1-2-cup-water",
-      "1-tsp-italian-seasoning"
-    ],
     "requiredAppliances": [
       "stove",
-      "hot-plate"
+      "hot plate"
     ],
     "recommendedAppliances": [],
     "instructions": [
       "Brown beef and drain.",
-      "Add macaroni, sauce, water, and seasoning.",
+      "Add macaroni, sauce, 1/2 cup water, and seasoning.",
       "Simmer 15\u201320 minutes, stirring occasionally."
     ],
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1/2",
+        "ingredient": "lb ground beef"
+      },
+      {
+        "amount": "1 cup",
+        "ingredient": "macaroni"
+      },
+      {
+        "amount": "1 can",
+        "ingredient": "tomato sauce"
+      },
+      {
+        "amount": "1 tsp",
+        "ingredient": "italian seasoning"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "air-fryer-roasted-veggies",
     "name": "Air Fryer Roasted Veggies",
-    "ingredients": [
-      "2-cups-vegetables",
-      "1-tbsp-olive-oil",
-      "salt",
-      "pepper",
-      "garlic-powder"
-    ],
     "requiredAppliances": [
-      "air-fryer"
+      "air fryer"
     ],
     "recommendedAppliances": [
       "oven"
@@ -557,22 +882,40 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "2 cups",
+        "ingredient": "Mixed vegetables"
+      },
+      {
+        "amount": "1 tbsp",
+        "ingredient": "olive oil"
+      },
+      {
+        "amount": "",
+        "ingredient": "salt"
+      },
+      {
+        "amount": "",
+        "ingredient": "pepper"
+      },
+      {
+        "amount": "",
+        "ingredient": "garlic powder"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "hot-plate-grilled-cheese",
     "name": "Hot Plate Grilled Cheese",
-    "ingredients": [
-      "2-slices-bread",
-      "2-slices-cheese",
-      "1-tbsp-butter"
-    ],
     "requiredAppliances": [
-      "hot-plate"
+      "hot plate"
     ],
     "recommendedAppliances": [
       "stove",
-      "air-fryer"
+      "air fryer"
     ],
     "instructions": [
       "Butter bread slices and place cheese in between.",
@@ -581,22 +924,28 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "2 slices",
+        "ingredient": "bread"
+      },
+      {
+        "amount": "2 slices",
+        "ingredient": "cheese"
+      },
+      {
+        "amount": "1 tbsp",
+        "ingredient": "butter"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "one-pan-lemon-herb-chicken-veggies",
     "name": "One-Pan Lemon Herb Chicken & Veggies",
-    "ingredients": [
-      "1-chicken-breast",
-      "1-cup-broccoli",
-      "1-2-lemon",
-      "1-tbsp-olive-oil",
-      "1-tsp-dried-herbs",
-      "salt",
-      "pepper"
-    ],
     "requiredAppliances": [
-      "hot-plate"
+      "hot plate"
     ],
     "recommendedAppliances": [
       "stove",
@@ -609,21 +958,45 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1",
+        "ingredient": "chicken breast"
+      },
+      {
+        "amount": "1 cup",
+        "ingredient": "broccoli"
+      },
+      {
+        "amount": "1/2",
+        "ingredient": "lemon"
+      },
+      {
+        "amount": "1 tbsp",
+        "ingredient": "olive oil"
+      },
+      {
+        "amount": "1 tsp",
+        "ingredient": "dried herbs"
+      },
+      {
+        "amount": "",
+        "ingredient": "salt"
+      },
+      {
+        "amount": "",
+        "ingredient": "pepper"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "egg-roll-in-a-bowl",
     "name": "Egg Roll in a Bowl",
-    "ingredients": [
-      "1-2-lb-ground-meat",
-      "2-cups-coleslaw-mix",
-      "2-tbsp-soy-sauce",
-      "1-tsp-ginger",
-      "1-tsp-garlic-powder"
-    ],
     "requiredAppliances": [
       "stove",
-      "hot-plate"
+      "hot plate"
     ],
     "recommendedAppliances": [],
     "instructions": [
@@ -634,20 +1007,37 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1 lb",
+        "ingredient": "ground beef"
+      },
+      {
+        "amount": "2 cups",
+        "ingredient": "coleslaw mix"
+      },
+      {
+        "amount": "2 tbsp",
+        "ingredient": "soy sauce"
+      },
+      {
+        "amount": "1 tsp",
+        "ingredient": "ginger"
+      },
+      {
+        "amount": "1 tsp",
+        "ingredient": "garlic powder"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "perfect-pan-fried-eggs",
     "name": "Perfect Pan-Fried Eggs",
-    "ingredients": [
-      "2-eggs",
-      "1-tbsp-butter-or-oil",
-      "salt",
-      "pepper"
-    ],
     "requiredAppliances": [
       "stove",
-      "hot-plate"
+      "hot plate"
     ],
     "recommendedAppliances": [],
     "instructions": [
@@ -658,18 +1048,33 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "2",
+        "ingredient": "egg"
+      },
+      {
+        "amount": "1 tbsp",
+        "ingredient": "butter"
+      },
+      {
+        "amount": "",
+        "ingredient": "salt"
+      },
+      {
+        "amount": "",
+        "ingredient": "pepper"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "basic-boiled-eggs",
     "name": "Basic Boiled Eggs",
-    "ingredients": [
-      "2-3-eggs",
-      "water"
-    ],
     "requiredAppliances": [
       "stove",
-      "hot-plate"
+      "hot plate"
     ],
     "recommendedAppliances": [],
     "instructions": [
@@ -680,47 +1085,55 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "2 3",
+        "ingredient": "egg"
+      }
+
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "simple-steamed-rice",
     "name": "Simple Steamed Rice",
-    "ingredients": [
-      "1-cup-white-rice",
-      "2-cups-water",
-      "salt"
-    ],
     "requiredAppliances": [
       "stove",
-      "hot-plate"
+      "hot plate"
     ],
     "recommendedAppliances": [
-      "rice-cooker"
+      "rice cooker"
     ],
     "instructions": [
-      "Rinse rice and combine with water and salt in pot.",
+      "Rinse rice and combine with 2 cups water and salt in pot.",
       "Boil, then simmer 15\u201320 mins covered.",
       "Let stand and fluff."
     ],
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1 cup",
+        "ingredient": "white rice"
+      },
+
+      {
+        "amount": "",
+        "ingredient": "salt"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "savory-oatmeal",
     "name": "Savory Oatmeal",
-    "ingredients": [
-      "1-2-cup-oats",
-      "1-cup-water-or-broth",
-      "1-fried-egg",
-      "soy-sauce",
-      "bagel-seasoning"
-    ],
     "requiredAppliances": [
       "microwave",
       "stove",
-      "hot-plate"
+      "hot plate"
     ],
     "recommendedAppliances": [],
     "instructions": [
@@ -730,21 +1143,33 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1/2 cup",
+        "ingredient": "oats"
+      },
+
+      {
+        "amount": "1",
+        "ingredient": "egg"
+      },
+      {
+        "amount": "",
+        "ingredient": "soy sauce"
+      },
+      {
+        "amount": "",
+        "ingredient": "bagel seasoning"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "air-fryer-chicken-nuggets",
     "name": "Air Fryer Chicken Nuggets",
-    "ingredients": [
-      "1-chicken-breast",
-      "1-2-cup-flour",
-      "1-egg",
-      "1-cup-breadcrumbs",
-      "salt",
-      "pepper"
-    ],
     "requiredAppliances": [
-      "air-fryer"
+      "air fryer"
     ],
     "recommendedAppliances": [
       "oven"
@@ -756,22 +1181,41 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1",
+        "ingredient": "chicken breast"
+      },
+      {
+        "amount": "1/2 cup",
+        "ingredient": "flour"
+      },
+      {
+        "amount": "1",
+        "ingredient": "egg"
+      },
+      {
+        "amount": "1 cup",
+        "ingredient": "breadcrumbs"
+      },
+      {
+        "amount": "",
+        "ingredient": "salt"
+      },
+      {
+        "amount": "",
+        "ingredient": "pepper"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "basic-tomato-sauce",
     "name": "Basic Tomato Sauce",
-    "ingredients": [
-      "1-can-crushed-tomatoes",
-      "2-cloves-garlic",
-      "1-tbsp-olive-oil",
-      "1-tsp-dried-herbs",
-      "salt",
-      "pepper"
-    ],
     "requiredAppliances": [
       "stove",
-      "hot-plate"
+      "hot plate"
     ],
     "recommendedAppliances": [],
     "instructions": [
@@ -781,18 +1225,38 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1 can",
+        "ingredient": "crushed tomatoes"
+      },
+      {
+        "amount": "2 cloves",
+        "ingredient": "garlic"
+      },
+      {
+        "amount": "1 tbsp",
+        "ingredient": "olive oil"
+      },
+      {
+        "amount": "1 tsp",
+        "ingredient": "dried herbs"
+      },
+      {
+        "amount": "",
+        "ingredient": "salt"
+      },
+      {
+        "amount": "",
+        "ingredient": "pepper"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "simple-guacamole",
     "name": "Simple Guacamole",
-    "ingredients": [
-      "2-avocados",
-      "juice-of-1-lime",
-      "1-4-cup-red-onion",
-      "1-4-cup-cilantro",
-      "salt"
-    ],
     "requiredAppliances": [],
     "recommendedAppliances": [],
     "instructions": [
@@ -802,17 +1266,36 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "2",
+        "ingredient": "avocados"
+      },
+      {
+        "amount": "1",
+        "ingredient": "juice of lime"
+      },
+      {
+        "amount": "1/4 cup",
+        "ingredient": "red onion"
+      },
+      {
+        "amount": "1/4 cup",
+        "ingredient": "cilantro"
+      },
+      {
+        "amount": "",
+        "ingredient": "salt"
+      }
+    ],
+    "recommendedIngredients": []
   },
   {
     "id": "two-ingredient-dough",
     "name": "Two-Ingredient Dough",
-    "ingredients": [
-      "1-cup-self-rising-flour",
-      "1-cup-greek-yogurt"
-    ],
     "requiredAppliances": [
-      "air-fryer",
+      "air fryer",
       "oven"
     ],
     "recommendedAppliances": [],
@@ -823,6 +1306,17 @@
     "tags": [],
     "author": "system",
     "version": 1,
-    "created": "2025-06-14"
+    "created": "2025-06-14",
+    "requiredIngredients": [
+      {
+        "amount": "1 cup",
+        "ingredient": "self rising flour"
+      },
+      {
+        "amount": "1 cup",
+        "ingredient": "greek yogurt"
+      }
+    ],
+    "recommendedIngredients": []
   }
 ]

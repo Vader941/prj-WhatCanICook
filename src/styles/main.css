@@ -1,4 +1,266 @@
 /* 
+ * Custom styles for the WhatCanICook application
+ * Works alongside Bootstrap for enhanced styling
+ */
+
+/* Remove fixed width constraint */
+body {
+  font-family: sans-serif;
+  /* Remove the max-width constraint */
+  margin: 0;
+  padding: 0;
+}
+
+/* Keep the profile icon styling */
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  background: #0d6efd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.profile-icon:hover {
+  background: #0b5ed7;
+  transform: scale(1.05);
+  color: white;
+}
+
+/* Enhanced ingredient category styling */
+.ingredient-category {
+  margin-bottom: 1.25rem;
+}
+
+.ingredient-category h3 {
+  font-size: 1rem;
+  color: #495057;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.category-ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Bootstrap-style ingredient tags */
+.ingredient-tag {
+  display: inline-flex;
+  align-items: center;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 50px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  max-width: 100%;
+  margin-bottom: 0.35rem;
+}
+
+.ingredient-tag:hover {
+  background-color: #e9ecef;
+}
+
+.ingredient-tag span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 0.25rem;
+}
+
+/* Container for tag buttons */
+.tag-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+/* Remove button for ingredients */
+.remove-btn {
+  background: transparent;
+  color: #dc3545;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.remove-btn:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Delete button for custom ingredients */
+.delete-btn {
+  background: transparent;
+  color: #6c757d;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Recipe carousel item styling */
+.carousel-item {
+  transition: opacity 0.5s ease;
+  padding: 0.5rem;
+}
+
+/* Recipe card styling */
+.recipe-card {
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  overflow-y: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  background-color: white;
+  transition: transform 0.3s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card-header {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.recipe-card-header h3 {
+  margin: 0;
+  color: #212529;
+  font-weight: 600;
+}
+
+.recipe-card-body {
+  padding: 1.25rem;
+}
+
+/* Recipe Carousel improvements */
+#recipe-carousel {
+  position: relative;
+  min-height: 450px; /* Slightly taller for better display */
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Match percentage displays */
+.recipe-match-info {
+  margin-bottom: 1rem;
+}
+
+.match-bar-container {
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.match-bar {
+  height: 100%;
+  background-color: #28a745;
+  border-radius: 4px;
+}
+
+.match-bar.recommended {
+  background-color: #17a2b8;
+}
+
+/* Missing ingredients styling */
+.missing {
+  color: #dc3545;
+  font-style: italic;
+}
+
+/* Recipe detail modal styling */
+.modal-body .ingredient-item {
+  margin-bottom: 0.25rem;
+}
+
+.amount {
+  color: #6c757d;
+  font-style: italic;
+  margin-right: 0.5rem;
+}
+
+/* Category radio buttons */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.radio-group .form-check-label {
+  display: flex;
+  align-items: center;
+}
+
+/* Bootstrap override for radio buttons */
+.form-check-input:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+/* Empty state */
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* 
  * Main stylesheet for the WhatCanICook application
  * Contains styles for all UI components and layout
  */
@@ -6,9 +268,9 @@
 /* Base page styles */
 body {
   font-family: sans-serif;
-  max-width: 600px;
-  margin: auto;
-  padding: 1rem;
+  /* Remove the max-width constraint */
+  margin: 0;
+  padding: 0;
 }
 
 /* Form element spacing */
@@ -205,7 +467,7 @@ header {
 .profile-icon {
   width: 40px;
   height: 40px;
-  background: #007bff;
+  background: #0d6efd;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -213,13 +475,15 @@ header {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
 
 .profile-icon:hover {
-  background: #0056b3;
+  background: #0b5ed7;
   transform: scale(1.05);
+  color: white;
 }
 
 /* Back button styling */
@@ -410,6 +674,41 @@ header {
   border-radius: 4px;
 }
 
+/* Updated Recipe Card Styles */
+.recipe-match-info {
+  margin: 0.75rem 0;
+}
+
+.recipe-match-info.recommended {
+  margin-top: 0.5rem;
+}
+
+.match-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.match-icon {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.match-bar-container.recommended {
+  background: #f8f9fa;
+}
+
+.match-bar.recommended {
+  background: #17a2b8;
+}
+
+.amount {
+  color: #6c757d;
+  font-style: italic;
+  margin-right: 0.5rem;
+}
+
 .recipe-info {
   margin: 0.75rem 0;
   font-size: 0.9rem;
@@ -442,6 +741,13 @@ header {
 
 .ingredient-item {
   padding: 0.15rem 0;
+}
+
+/* Ingredient detail styling */
+.ingredient-list .ingredient-item {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.25rem 0;
 }
 
 .missing {
@@ -516,9 +822,12 @@ header {
 .recipe-detail-info {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.recipe-detail-info span {
+  white-space: nowrap;
 }
 
 .recipe-detail-section {
@@ -546,10 +855,50 @@ header {
   font-size: 0.9rem;
 }
 
-.no-results {
-  text-align: center;
-  padding: 2rem;
-  background: #f8f9fa;
-  border-radius: 8px;
-  margin-top: 1rem;
+/* Fixed height containers for better layout */
+#ingredients-container {
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  max-height: 500px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+#recipe-carousel-container {
+  position: relative;
+  height: 400px;
+  margin-bottom: 2.5rem;
+}
+
+#recipe-carousel {
+  height: calc(100% - 50px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  padding: 0.5rem;
+}
+
+/* Navigation controls for recipe carousel */
+.carousel-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+/* Make sure recipe cards don't overflow their container */
+.recipe-card {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+/* Ensure consistent spacing for the Find Recipes button */
+#find-recipes-btn {
+  padding: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }

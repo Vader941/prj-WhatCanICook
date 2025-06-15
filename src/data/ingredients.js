@@ -3,66 +3,119 @@
  * Organized as a dictionary/object with category names as keys and arrays of ingredients as values
  * Used to populate the ingredient selection dropdown and provide structure for ingredient management
  */
+
+// Make sure this is exported correctly
 export const ingredientCategories = {
   // Basic cooking staples and pantry items
   "Staples": [
-    "Rice", "Pasta", "Bread", "Flour", "Sugar", "Salt", "Oil", "Vinegar",
-    "Baking Powder", "Baking Soda", "Vanilla Extract", "Honey", "Soy Sauce"
+    "salt",
+    "pepper",
+    "olive oil",
+    "butter",
+    "brown sugar",
+    "flour",
+    "self rising flour"
   ],
-  
-  // Dairy products and eggs
-  "Dairy & Eggs": [
-    "Milk", "Butter", "Cheese", "Yogurt", "Cream", "Eggs", "Sour Cream",
-    "Cream Cheese", "Mozzarella", "Parmesan", "Cheddar"
-  ],
-  
-  // Meat, fish, and plant-based protein sources
+  "Dairy and Eggs": [
+    "milk",
+    "shredded cheese",
+    "egg",
+    "sour cream",
+    "cheddar cheese",
+    "mozzarella",
+    "greek yogurt",
+    "cheese"
+    ],
   "Proteins": [
-    "Chicken", "Beef", "Pork", "Fish", "Salmon", "Tuna", "Shrimp", "Turkey",
-    "Ham", "Bacon", "Ground Beef", "Chicken Breast", "Tofu", "Beans", "Lentils"
+    "cooked bacon bits",
+    "tuna",
+    "sausage links",
+    "ground beef",
+    "chicken breast"
   ],
-  
-  // Fresh and cooking vegetables
   "Vegetables": [
-    "Onions", "Garlic", "Tomatoes", "Potatoes", "Carrots", "Celery", "Bell Peppers",
-    "Broccoli", "Spinach", "Lettuce", "Mushrooms", "Zucchini", "Cucumber",
-    "Green Beans", "Corn", "Peas", "Cabbage", "Cauliflower"
+    "medium russet potato",
+    "black beans",
+    "tomato",
+    "red onion",
+    "spinach",
+    "shredded carrots",
+    "cucumber",
+    "kidney beans",
+    "diced tomatoes",
+    "cherry tomatoes",
+    "bell pepper",
+    "onion",
+    "mixed vegetables",
+    "broccoli",
+    "coleslaw mix",
+    "garlic",
+    "avocado"
   ],
-  
-  // Fresh and cooking fruits
   "Fruits": [
-    "Apples", "Bananas", "Oranges", "Lemons", "Limes", "Strawberries", "Blueberries",
-    "Grapes", "Avocado", "Mango", "Pineapple", "Berries", "Cherries"
+    "apple",
+    "dried fruit",
+    "berries",
+    "juice of lime",
+    "banana",
+    "fruit",
+    "juice of lemon",
+    "lemon"
   ],
-  
-  // Herbs and spices for flavoring
   "Herbs & Spices": [
-    "Basil", "Oregano", "Thyme", "Rosemary", "Parsley", "Cilantro", "Dill",
-    "Black Pepper", "Paprika", "Cumin", "Chili Powder", "Garlic Powder",
-    "Onion Powder", "Cinnamon", "Nutmeg", "Ginger", "Turmeric"
+    "soy sauce",
+    "sriracha",
+    "cumin",
+    "cinnamon",
+    "fresh basil",
+    "bagel seasoning",
+    "red pepper flakes",
+    "chili powder",
+    "italian seasoning",
+    "garlic powder",
+    "dried herbs",
+    "ginger",
+    "cilantro"
   ],
-  
-  // Grains and cereal products
   "Grains & Cereals": [
-    "Oats", "Quinoa", "Barley", "Brown Rice", "White Rice", "Couscous",
-    "Bulgur", "Cereal", "Granola"
+    "elbow macaroni",
+    "packet instant ramen",
+    "instant rice",
+    "pasta",
+    "pretzels",
+    "bread",
+    "granola",
+    "rolled oats",
+    "tortilla",
+    "macaroni",
+    "white rice",
+    "oats",
+    "breadcrumbs"
   ],
-  
-  // Condiments and sauces for adding flavor
   "Condiments & Sauces": [
-    "Ketchup", "Mustard", "Mayonnaise", "Hot Sauce", "Worcestershire Sauce",
-    "Barbecue Sauce", "Teriyaki Sauce", "Olive Oil", "Sesame Oil"
+    "salsa",
+    "mayonnaise",
+    "marinara sauce",
+    "balsamic glaze",
+    "pesto",
+    "tomato sauce",
+    "soy sauce",
+    "honey",
+    "hummus",
+    "capers",
+    "crushed tomatoes"
   ],
-  
-  // Frozen food items
   "Frozen": [
-    "Frozen Vegetables", "Frozen Berries", "Frozen Fish", "Ice Cream",
-    "Frozen Pizza", "Frozen Chicken"
+    "frozen peas and carrots"
   ],
-  
-  // Other pantry and canned items
   "Pantry": [
-    "Canned Tomatoes", "Chicken Broth", "Vegetable Broth", "Coconut Milk",
-    "Peanut Butter", "Jam", "Pickles", "Olives", "Nuts", "Seeds"
+    "tortilla chips",
+    "parmesan cheese",
+    "nuts",
+    "chocolate chips",
+    "chia seeds"
   ]
 };
+
+// Add this check to verify the module loads correctly
+console.log("Ingredients data loaded with categories:", Object.keys(ingredientCategories));

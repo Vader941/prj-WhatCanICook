@@ -1,0 +1,151 @@
+{
+  "pasta": [
+    "macaroni",
+    "elbow macaroni",
+    "rotini",
+    "penne",
+    "shells",
+    "fusilli",
+    "spaghetti",
+    "noodles"
+  ],
+  "potato": [
+    "russet potato",
+    "red potato",
+    "yellow potato",
+    "gold potato",
+    "baby potato",
+    "sweet potato"
+  ],
+  "cheese": [
+    "cheddar",
+    "shredded cheese",
+    "mozzarella",
+    "parmesan",
+    "american cheese",
+    "swiss cheese"
+  ],
+  "milk": [
+    "whole milk",
+    "2% milk",
+    "skim milk",
+    "plant milk",
+    "almond milk",
+    "soy milk",
+    "oat milk"
+  ],
+  "egg": [
+    "eggs",
+    "scrambled egg",
+    "fried egg",
+    "boiled egg"
+  ],
+  "bread": [
+    "white bread",
+    "whole wheat bread",
+    "bun",
+    "roll",
+    "toast"
+  ],
+  "rice": [
+    "white rice",
+    "brown rice",
+    "instant rice",
+    "jasmine rice",
+    "basmati rice"
+  ],
+  "bean": [
+    "black beans",
+    "kidney beans",
+    "chickpeas",
+    "pinto beans",
+    "canned beans"
+  ],
+  "vegetable": [
+    "carrot",
+    "broccoli",
+    "spinach",
+    "zucchini",
+    "cucumber",
+    "bell pepper",
+    "mixed vegetables",
+    "lettuce"
+  ],
+  "fruit": [
+    "apple",
+    "banana",
+    "berries",
+    "strawberries",
+    "blueberries",
+    "grapes",
+    "orange"
+  ],
+  "meat": [
+    "ground beef",
+    "ground turkey",
+    "chicken breast",
+    "cooked sausage",
+    "bacon",
+    "ham",
+    "turkey slices"
+  ],
+  "fish": [
+    "tuna",
+    "salmon",
+    "canned tuna"
+  ],
+  "sauce": [
+    "pasta sauce",
+    "marinara",
+    "tomato sauce",
+    "pesto",
+    "soy sauce",
+    "sriracha",
+    "hot sauce"
+  ],
+  "spice": [
+    "salt",
+    "pepper",
+    "garlic powder",
+    "onion powder",
+    "chili powder",
+    "cumin",
+    "italian seasoning"
+  ],
+  "oil": [
+    "olive oil",
+    "vegetable oil",
+    "canola oil"
+  ],
+  "dairy": [
+    "butter",
+    "cream cheese",
+    "sour cream",
+    "yogurt",
+    "greek yogurt"
+  ],
+  "grain": [
+    "oats",
+    "rolled oats",
+    "granola",
+    "tortilla",
+    "crackers"
+  ],
+  "legume": [
+    "lentils",
+    "peas",
+    "split peas",
+    "green peas"
+  ],
+  "herb": [
+    "basil",
+    "cilantro",
+    "parsley"
+  ],
+  "nut": [
+    "peanut",
+    "almond",
+    "cashew",
+    "mixed nuts"
+  ]
+}

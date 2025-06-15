@@ -4,86 +4,164 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WhatCanICook</title>
-  <!-- Link to main stylesheet -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom stylesheets -->
   <link rel="stylesheet" href="./src/styles/main.css" />
+  <link rel="stylesheet" href="./src/styles/styles.css" />
 </head>
 <body>
-  <!-- Header with app title and navigation -->
-  <header>
-    <h1 class="main-title">What Can I Cook?</h1>
-    <div class="nav-links">
-      <!-- Profile icon links to the kitchen profile page -->
-      <a href="profile.html" class="profile-icon" title="My Kitchen Profile">P</a>
+  <!-- Navigation bar with app title and centered logo -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+    <div class="container-fluid">
+      <div class="navbar-brand-container w-100 d-flex justify-content-center">
+        <a class="navbar-brand" href="#">
+          <img src="./src/img/logo1.png" alt="What Can I Cook?" height="60" class="logo-image">
+        </a>
+      </div>
+      <div class="position-absolute end-0 me-3">
+        <a href="profile.html" class="profile-icon" title="My Kitchen Profile">P</a>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <!-- Main ingredient selection section -->
-  <section id="ingredient-section">
-    <h2>My Ingredients</h2>
+  <!-- Main content container - use fluid for more space -->
+  <div class="container-fluid px-4">
+    <div class="row g-4">
+      <!-- Left column for ingredients -->
+      <div class="col-md-6 col-lg-5 col-xl-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">My Ingredients</h4>
+          </div>
+          <div class="card-body">
+            <!-- Form for ingredient selection dropdown -->
+            <form id="ingredient-form" class="mb-3">
+              <div class="input-group">
+                <select id="ingredient-select" class="form-select" required>
+                  <option value="">Select ingredient...</option>
+                  <!-- Options will be populated by JavaScript -->
+                  <option value="manual">+ Add new ingredient</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Add</button>
+              </div>
+            </form>
 
-    <!-- Form for ingredient selection dropdown -->
-    <form id="ingredient-form">
-      <select id="ingredient-select" required>
-        <option value="">Select ingredient...</option>
-        <!-- Options will be populated by JavaScript -->
-        <option value="manual">+ Add new ingredient</option>
-      </select>
-      <button type="submit">Add Ingredient</button>
-    </form>
+            <!-- MOVED: Find recipes button now appears above ingredient list -->
+            <div class="d-grid gap-2 mb-3">
+              <button id="find-recipes-btn" class="btn btn-success">Find Recipes</button>
+            </div>
+            
+            <!-- Categorized ingredients display with scrollable container -->
+            <div id="ingredients-container">
+              <div id="categorized-ingredients">
+                <!-- Categories will be populated by JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right column for recipe carousel - with reduced height -->
+      <div class="col-md-6 col-lg-7 col-xl-8">
+        <div class="card shadow-sm mb-4">
+          <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">Recipe Matches</h4>
+            <div id="carousel-counter" class="badge bg-light text-dark">0 recipes found</div>
+          </div>
+          <div class="card-body">
+            <!-- Recipe carousel with reduced height -->
+            <div id="recipe-carousel-container">
+              <div id="recipe-carousel" class="mb-3">
+                <!-- Recipe cards will be populated here -->
+              </div>
+              
+              <!-- Carousel navigation - now positioned at the bottom of container -->
+              <div class="d-flex justify-content-between" style="position: absolute; bottom: 0; width: 100%;">
+                <button id="prev-recipe" class="btn btn-primary rounded-circle">
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+                <button id="next-recipe" class="btn btn-primary rounded-circle">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <!-- List of user's selected ingredients -->
-    <ul id="ingredient-list"></ul>
-    
-    <!-- Find recipes button -->
-    <div class="find-recipes-container">
-      <button id="find-recipes-btn" class="find-recipes-btn">Find Recipes</button>
+        <!-- NEW: Recipe Statistics Card -->
+        <div class="card shadow-sm">
+          <div class="card-header bg-info text-white">
+            <h5 class="mb-0">Recipe Statistics</h5>
+          </div>
+          <div class="card-body">
+            <div id="recipe-statistics" class="row">
+              <div class="col text-center">
+                <p class="text-muted small">Search for recipes to see statistics</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Recipe Results Section -->
-  <section id="recipe-results">
-    <!-- Recipe cards will be populated here -->
-  </section>
-
-  <!-- Recipe detail modal (hidden by default) -->
-  <div id="recipe-modal" class="recipe-modal" style="display: none;">
-    <div class="recipe-modal-content">
-      <button class="close-modal">&times;</button>
-      <div id="recipe-detail-content"></div>
+  <!-- Recipe detail modal -->
+  <div id="recipe-modal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Recipe Details</h5>
+          <button type="button" class="btn-close close-modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="recipe-detail-content">
+          <!-- Recipe details will be populated here -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary close-modal">Close</button>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- Popup for manually adding new ingredients -->
-  <div id="manual-ingredient-popup" class="popup-overlay" style="display: none;">
-    <div class="popup-content">
-      <h3>Add New Ingredient</h3>
-      <form id="manual-ingredient-form">
-        <!-- Ingredient name input -->
-        <div class="form-group">
-          <label for="new-ingredient-name">Ingredient Name:</label>
-          <input type="text" id="new-ingredient-name" required />
+  <div id="manual-ingredient-popup" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add New Ingredient</h5>
+          <button type="button" class="btn-close" id="cancel-manual" aria-label="Close"></button>
         </div>
-        
-        <!-- Category selection radio buttons -->
-        <div class="form-group">
-          <label>Category:</label>
-          <div class="radio-group" id="category-radio-group">
-            <!-- Radio buttons will be populated by JavaScript -->
-            <label><input type="radio" name="category" value="Dairy" /> Dairy</label>
-            <label><input type="radio" name="category" value="Spices & Herbs" /> Spices & Herbs</label>
-          </div>
+        <div class="modal-body">
+          <form id="manual-ingredient-form">
+            <!-- Ingredient name input -->
+            <div class="mb-3">
+              <label for="new-ingredient-name" class="form-label">Ingredient Name:</label>
+              <input type="text" class="form-control" id="new-ingredient-name" required />
+            </div>
+            
+            <!-- Category selection radio buttons -->
+            <div class="mb-3">
+              <label class="form-label">Category:</label>
+              <div class="radio-group" id="category-radio-group">
+                <!-- Radio buttons will be populated by JavaScript -->
+              </div>
+            </div>
+          </form>
         </div>
-        
-        <!-- Form action buttons -->
-        <div class="form-buttons">
-          <button type="submit">Add Ingredient</button>
-          <button type="button" id="cancel-manual">Cancel</button>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="cancel-manual">Cancel</button>
+          <button type="submit" class="btn btn-primary" form="manual-ingredient-form">Add Ingredient</button>
         </div>
-      </form>
+      </div>
     </div>
   </div>
 
-  <!-- Main script file -->
+  <!-- Bootstrap bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <!-- Main script files -->
   <script src="./src/main.js" type="module"></script>
   <script src="./src/logic/matchRecipes.js" type="module"></script>
 </body>

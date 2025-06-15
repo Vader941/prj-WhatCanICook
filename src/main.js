@@ -1,27 +1,24 @@
 /**
  * Main application script for the WhatCanICook web app
- * Handles ingredient management including:
- * - Loading ingredients from categories
- * - Adding custom ingredients
- * - Tracking user-selected ingredients
- * - Managing the ingredient selection UI
  */
 console.log("Welcome to WhatCanICook!");
 
-// Import ingredient data categories
+// Import ingredient data categories and normalization utilities
 import { ingredientCategories } from './data/ingredients.js';
+import { normalizeIngredientName, isDuplicateIngredient, normalizeIngredientId } from './utils/normalizeIngredients.js';
 
-// Log available categories to help with debugging
+// Add more detailed logging to diagnose the issue
 console.log("Imported ingredient categories:", Object.keys(ingredientCategories));
+console.log("Number of categories:", Object.keys(ingredientCategories).length);
+console.log("Sample category contents:", ingredientCategories["Staples"] || "Not found");
 
 /**
  * Class responsible for managing all ingredient-related functionality
- * Including user's ingredient list, custom ingredients, and UI interactions
  */
 class IngredientManager {
   constructor() {
-    // Initialize user ingredients from localStorage or empty set if none exists
-    this.userIngredients = new Set(JSON.parse(localStorage.getItem('userIngredients') || '[]'));
+    // Initialize with empty Map first (avoid circular dependency)
+    this.userIngredients = new Map();
     
     // Initialize custom ingredients from localStorage or empty object if none exists
     this.customIngredients = JSON.parse(localStorage.getItem('customIngredients') || '{}');
@@ -40,23 +37,73 @@ class IngredientManager {
    */
   initialize() {
     try {
-      this.initializeDropdown();      // Setup ingredient dropdown with categories
-      this.initializeCategoryRadios(); // Setup category radio buttons for manual ingredient entry
-      this.initializeEventListeners(); // Add event handlers for user interactions
-      this.populateCustomIngredients(); // Add any previously created custom ingredients
-      this.renderUserIngredients();    // Display user's currently selected ingredients
+      this.loadStoredIngredients();  // First load ingredients safely
+      this.initializeDropdown();     // Then setup the UI components
+      this.initializeCategoryRadios();
+      this.initializeEventListeners();
+      this.populateCustomIngredients();
+      this.renderUserIngredients();
     } catch (error) {
       console.error('Error initializing IngredientManager:', error);
     }
   }
+  
+  /**
+   * Load user ingredients from localStorage safely
+   * Avoids circular dependency during initialization
+   */
+  loadStoredIngredients() {
+    const storedIngredients = JSON.parse(localStorage.getItem('userIngredients') || '[]');
+    
+    // Clear the Map (should be empty, but just to be safe)
+    this.userIngredients.clear();
+    
+    // Check the format of stored ingredients
+    if (storedIngredients.length > 0) {
+      if (Array.isArray(storedIngredients[0])) {
+        // New format with [id, name] pairs
+        storedIngredients.forEach(([id, name]) => {
+          this.userIngredients.set(id, name);
+        });
+      } else {
+        // Old format with just IDs - use the dropdown name or ID itself
+        storedIngredients.forEach(id => {
+          // Get name from dropdown if initialized, otherwise use ID temporarily
+          // We'll fix any missing names when dropdown is initialized
+          const name = id;  // Just use ID during initialization
+          this.userIngredients.set(id, name);
+        });
+      }
+    }
+  }
 
+  /**
+   * Updates display names for ingredients after dropdown is initialized
+   * This ensures all ingredients have proper display names even if loaded before dropdown
+   */
+  updateIngredientDisplayNames() {
+    for (const [id, name] of this.userIngredients.entries()) {
+      if (id === name) {  // If name is same as ID, try to get a better name
+        const betterName = this.getDropdownName(id);
+        if (betterName) {
+          this.userIngredients.set(id, betterName);
+        }
+      }
+    }
+  }
+  
   /**
    * Sets up the ingredient dropdown with categorized options
    * Groups ingredients by their categories and sorts them alphabetically
    */
   initializeDropdown() {
     const select = document.getElementById('ingredient-select');
-    if (!select) throw new Error('ingredient-select element not found');
+    if (!select) {
+      console.error('ingredient-select element not found');
+      return; // Exit early instead of throwing an error
+    }
+
+    console.log("Initializing dropdown with categories:", Object.keys(ingredientCategories));
 
     // Preserve the default empty option and "add manual" option
     const emptyOption = select.querySelector('option[value=""]');
@@ -75,22 +122,35 @@ class IngredientManager {
       select.appendChild(newEmpty);
     }
 
-    // Add each category as an optgroup with its ingredients as options
-    Object.entries(ingredientCategories).forEach(([category, ingredients]) => {
-      const optgroup = document.createElement('optgroup');
-      optgroup.label = category;
+    // Check if ingredientCategories is empty or undefined
+    if (!ingredientCategories || Object.keys(ingredientCategories).length === 0) {
+      console.error("No ingredient categories found! Check import path.");
+      
+      // Add a single disabled option to show there's a problem
+      const errorOption = document.createElement('option');
+      errorOption.disabled = true;
+      errorOption.textContent = '-- Error loading ingredients --';
+      select.appendChild(errorOption);
+    } else {
+      // Add each category as an optgroup with its ingredients as options
+      Object.entries(ingredientCategories).forEach(([category, ingredients]) => {
+        const optgroup = document.createElement('optgroup');
+        optgroup.label = category;
 
-      // Sort ingredients alphabetically before adding
-      [...ingredients].sort().forEach(ingredient => {
-        const option = document.createElement('option');
-        // Create an ID-friendly value from the ingredient name
-        option.value = ingredient.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
-        option.textContent = ingredient;
-        optgroup.appendChild(option);
+        console.log(`Adding category: ${category} with ${ingredients.length} ingredients`);
+
+        // Sort ingredients alphabetically before adding
+        [...ingredients].sort().forEach(ingredient => {
+          const option = document.createElement('option');
+          // Create an ID-friendly value from the ingredient name
+          option.value = ingredient.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+          option.textContent = ingredient;
+          optgroup.appendChild(option);
+        });
+
+        select.appendChild(optgroup);
       });
-
-      select.appendChild(optgroup);
-    });
+    }
 
     // Re-add the "manual add" option at the end
     if (manualOption) {
@@ -101,6 +161,9 @@ class IngredientManager {
       newManual.textContent = '+ Add new ingredient';
       select.appendChild(newManual);
     }
+
+    // After dropdown is initialized, update any ingredient names
+    this.updateIngredientDisplayNames();
   }
 
   /**
@@ -139,11 +202,22 @@ class IngredientManager {
     const cancelBtn = document.getElementById('cancel-manual');
     const popup = document.getElementById('manual-ingredient-popup');
 
-    // Form submission for selecting an ingredient from dropdown
-    ingredientForm?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      this.handleIngredientSelection();
-    });
+    // Form submission for selecting an ingredient from dropdown - FIX: bound to this context
+    if (ingredientForm) {
+      console.log('Setting up ingredient form submit handler');
+      // Use a named function to ensure the event handler isn't lost
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Form submitted, processing selection');
+        this.handleIngredientSelection();
+      };
+      
+      // Remove any existing handlers to prevent duplicates
+      ingredientForm.removeEventListener('submit', handleSubmit);
+      ingredientForm.addEventListener('submit', handleSubmit);
+    } else {
+      console.error('Ingredient form element not found!');
+    }
 
     // Form submission for manually adding a new ingredient
     manualForm?.addEventListener('submit', (e) => {
@@ -168,16 +242,27 @@ class IngredientManager {
    */
   handleIngredientSelection() {
     const select = document.getElementById('ingredient-select');
+    
+    if (!select) {
+      console.error('Ingredient select element not found');
+      return;
+    }
+    
     const value = select.value;
+    console.log(`Selected ingredient value: "${value}"`);
 
     if (value === 'manual') {
       // Show popup for manual ingredient entry
       this.showManualPopup();
     } else if (value) {
       // Add the selected ingredient to user's ingredients
-      this.addIngredient(value);
-      // Reset dropdown to empty selection
-      select.value = '';
+      const success = this.addIngredient(value);
+      
+      // Only reset the dropdown if the ingredient was successfully added
+      if (success) {
+        console.log('Resetting select dropdown after successful add');
+        select.value = '';
+      }
     }
   }
 
@@ -196,16 +281,29 @@ class IngredientManager {
       return;
     }
 
+    // Keep original input name for display
+    const originalName = name;
+
+    // Normalize the ingredient name for ID generation and duplicate checking
+    const normalizedName = normalizeIngredientName(name);
+    
+    // Check if this ingredient already exists (using normalized form)
+    if (isDuplicateIngredient(normalizedName, 
+        new Set([...this.userIngredients.keys()]))) {
+      alert(`You already have "${name}" in your ingredient list.`);
+      return;
+    }
+
     // Create an ID for the ingredient (lowercase, hyphenated)
-    const id = name.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
+    const id = normalizedName.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
 
     // Initialize category array if it doesn't exist
     if (!this.customIngredients[category]) {
       this.customIngredients[category] = [];
     }
 
-    // Add to custom ingredients
-    this.customIngredients[category].push({ id, name });
+    // Add to custom ingredients - store original name
+    this.customIngredients[category].push({ id, name: originalName });
     
     // Sort ingredients alphabetically within their category
     this.customIngredients[category].sort((a, b) => a.name.localeCompare(b.name));
@@ -214,8 +312,9 @@ class IngredientManager {
     localStorage.setItem('customIngredients', JSON.stringify(this.customIngredients));
 
     // Add the ingredient to the dropdown and user's selected ingredients
-    this.addToDropdown(id, name, category);
-    this.addIngredient(id);
+    this.addToDropdown(id, originalName, category);
+    // Pass original name to preserve it
+    this.addIngredient(id, originalName);
     
     // Close the popup
     this.closeManualPopup();
@@ -273,13 +372,270 @@ class IngredientManager {
   }
 
   /**
+   * Renders the user's selected ingredients in the UI
+   * Organizes ingredients by their categories
+   */
+  renderUserIngredients() {
+    const container = document.getElementById('categorized-ingredients');
+    if (!container) return;
+
+    // Clear the current display
+    container.innerHTML = '';
+    
+    if (this.userIngredients.size === 0) {
+      container.innerHTML = `
+        <div class="alert alert-info">
+          <i class="bi bi-info-circle me-2"></i>
+          No ingredients added yet. Start adding ingredients above.
+        </div>
+      `;
+      return;
+    }
+    
+    // Group ingredients by category
+    const categorizedIngredients = {};
+    
+    // Process all user ingredients - now using entries() for [id, displayName]
+    for (const [id, displayName] of this.userIngredients.entries()) {
+      // Find the ingredient's category by ID
+      let category = this.findIngredientCategory(id);
+      
+      // Initialize category array if needed
+      if (!categorizedIngredients[category]) {
+        categorizedIngredients[category] = [];
+      }
+      
+      // Add to the appropriate category - use the stored displayName
+      categorizedIngredients[category].push({ id, name: displayName });
+    }
+
+    // Sort the categories by name
+    const sortedCategories = Object.keys(categorizedIngredients).sort();
+    
+    // Create DOM elements for each category and its ingredients
+    sortedCategories.forEach(category => {
+      const categoryDiv = document.createElement('div');
+      categoryDiv.className = 'ingredient-category';
+      
+      // Category heading
+      const heading = document.createElement('h3');
+      heading.textContent = category;
+      categoryDiv.appendChild(heading);
+      
+      // Container for ingredients in this category
+      const ingredientsList = document.createElement('div');
+      ingredientsList.className = 'category-ingredients';
+      
+      // Sort ingredients alphabetically within each category
+      const sortedIngredients = categorizedIngredients[category].sort((a, b) => 
+        a.name.localeCompare(b.name));
+      
+      // Add each ingredient as a tag with remove button
+      sortedIngredients.forEach(({ id, name }) => {
+        const tag = document.createElement('div');
+        tag.className = 'ingredient-tag';
+        
+        // Ingredient name
+        const nameSpan = document.createElement('span');
+        nameSpan.textContent = name;
+        tag.appendChild(nameSpan);
+        
+        // Button container for actions
+        const buttonContainer = document.createElement('div');
+        buttonContainer.className = 'tag-buttons';
+        
+        // Remove button - removes from selected ingredients only
+        const removeBtn = document.createElement('button');
+        removeBtn.className = 'remove-btn';
+        removeBtn.innerHTML = '&times;';
+        removeBtn.setAttribute('aria-label', 'Remove ingredient');
+        removeBtn.title = 'Remove from selection';
+        removeBtn.onclick = () => this.removeIngredient(id);
+        buttonContainer.appendChild(removeBtn);
+        
+        // Check if this is a custom ingredient
+        const isCustom = this.isCustomIngredient(id);
+        if (isCustom) {
+          // Delete button - deletes custom ingredient completely
+          const deleteBtn = document.createElement('button');
+          deleteBtn.className = 'delete-btn';
+          deleteBtn.innerHTML = '<i class="bi bi-trash3"></i>';
+          deleteBtn.setAttribute('aria-label', 'Delete custom ingredient');
+          deleteBtn.title = 'Delete custom ingredient';
+          deleteBtn.onclick = (e) => {
+            e.stopPropagation();
+            this.deleteCustomIngredient(id);
+          };
+          buttonContainer.appendChild(deleteBtn);
+        }
+        
+        tag.appendChild(buttonContainer);
+        ingredientsList.appendChild(tag);
+      });
+      
+      categoryDiv.appendChild(ingredientsList);
+      container.appendChild(categoryDiv);
+    });
+  }
+  
+  /**
+   * Checks if an ingredient is a custom ingredient
+   * @param {string} id - The ID of the ingredient to check
+   * @returns {boolean} True if it's a custom ingredient
+   */
+  isCustomIngredient(id) {
+    // Check all categories in customIngredients for the ID
+    return Object.values(this.customIngredients).some(
+      ingredients => ingredients.some(ing => ing.id === id)
+    );
+  }
+
+  /**
+   * Deletes a custom ingredient completely from the system
+   * @param {string} id - The ID of the custom ingredient to delete
+   */
+  deleteCustomIngredient(id) {
+    // Confirm deletion
+    if (!confirm('Are you sure you want to delete this ingredient? This cannot be undone.')) {
+      return;
+    }
+    
+    console.log(`Deleting custom ingredient: ${id}`);
+    
+    // Remove from userIngredients if present
+    if (this.userIngredients.has(id)) {
+      this.userIngredients.delete(id);
+      this.saveUserIngredients();
+    }
+    
+    // Find and remove from customIngredients
+    let found = false;
+    for (const [category, ingredients] of Object.entries(this.customIngredients)) {
+      const index = ingredients.findIndex(ing => ing.id === id);
+      if (index !== -1) {
+        // Remove the ingredient from the category
+        this.customIngredients[category].splice(index, 1);
+        found = true;
+        break;
+      }
+    }
+    
+    if (found) {
+      // Save updated custom ingredients list
+      localStorage.setItem('customIngredients', JSON.stringify(this.customIngredients));
+      
+      // Remove from dropdown
+      const select = document.getElementById('ingredient-select');
+      const option = select?.querySelector(`option[value="${id}"]`);
+      if (option) option.remove();
+      
+      console.log(`Custom ingredient ${id} deleted successfully`);
+    } else {
+      console.warn(`Failed to find custom ingredient ${id} for deletion`);
+    }
+    
+    // Re-render the ingredients list
+    this.renderUserIngredients();
+  }
+
+  /**
+   * Finds the category of an ingredient by its ID
+   * @param {string} id - The ID of the ingredient
+   * @returns {string} - The category name
+   */
+  findIngredientCategory(id) {
+    // First check in the predefined categories
+    for (const [category, ingredients] of Object.entries(ingredientCategories)) {
+      const normalizedIngredients = ingredients.map(ing => 
+        ing.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')
+      );
+      
+      if (normalizedIngredients.includes(id)) {
+        return category;
+      }
+    }
+    
+    // Then check in custom ingredients
+    for (const [category, ingredients] of Object.entries(this.customIngredients)) {
+      if (ingredients.some(ing => ing.id === id)) {
+        return category;
+      }
+    }
+    
+    // Default category if not found
+    return "Other";
+  }
+
+  /**
    * Adds an ingredient to the user's selected ingredients
    * @param {string} id - The ID of the ingredient to add
+   * @param {string} [displayName] - Optional custom display name (uses dropdown text by default)
+   * @returns {boolean} - Whether the ingredient was successfully added
    */
-  addIngredient(id) {
-    this.userIngredients.add(id);
-    this.saveUserIngredients();
-    this.renderUserIngredients();
+  addIngredient(id, displayName = null) {
+    // Fix: Ensure the id is a string
+    const ingredientId = String(id);
+    console.log(`Attempting to add ingredient: "${ingredientId}"`);
+    
+    // Check for empty values
+    if (!ingredientId.trim()) {
+      console.warn('Attempted to add empty ingredient ID');
+      return false;
+    }
+    
+    try {
+      // Normalize the ID to prevent duplicates
+      const normalizedId = normalizeIngredientId(ingredientId);
+      console.log(`Normalized ID: "${normalizedId}"`);
+      
+      // Debug current ingredients
+      console.log('Current ingredients:', [...this.userIngredients.keys()]);
+      
+      // Check if this ingredient (or its normalized form) already exists
+      // by comparing normalized IDs
+      const isDuplicate = Array.from(this.userIngredients.keys()).some(existingId => {
+        const existingNormalized = normalizeIngredientId(existingId);
+        const isDup = existingNormalized === normalizedId;
+        if (isDup) {
+          console.log(`Duplicate found: "${existingId}" (norm: "${existingNormalized}") matches "${ingredientId}" (norm: "${normalizedId}")`);
+        }
+        return isDup;
+      });
+      
+      if (isDuplicate) {
+        console.log(`Ingredient "${ingredientId}" already exists, not adding duplicate.`);
+        return false;
+      }
+      
+      // Get display name (from parameter, dropdown, or fallback to ID)
+      const name = displayName || this.getDropdownName(ingredientId) || ingredientId;
+      
+      // Add the ingredient to the Map with its display name
+      this.userIngredients.set(ingredientId, name);
+      console.log(`Successfully added ingredient: "${ingredientId}" with display name: "${name}"`);
+      console.log(`Updated ingredients:`, [...this.userIngredients.entries()]);
+      
+      // Update localStorage and UI
+      this.saveUserIngredients();
+      this.renderUserIngredients();
+      
+      return true;
+    } catch (error) {
+      console.error(`Error adding ingredient "${ingredientId}":`, error);
+      return false;
+    }
+  }
+
+  /**
+   * Get name from dropdown by ID
+   * @param {string} id - Ingredient ID to look up
+   * @returns {string|null} - Display name if found
+   */
+  getDropdownName(id) {
+    const select = document.getElementById('ingredient-select');
+    const option = select?.querySelector(`option[value="${id}"]`);
+    if (option && option.value !== 'manual') return option.textContent;
+    return null;
   }
 
   /**
@@ -296,49 +652,26 @@ class IngredientManager {
    * Saves the user's selected ingredients to localStorage
    */
   saveUserIngredients() {
-    localStorage.setItem('userIngredients', JSON.stringify([...this.userIngredients]));
-  }
-
-  /**
-   * Renders the user's selected ingredients in the UI
-   * Creates a list with remove buttons
-   */
-  renderUserIngredients() {
-    const list = document.getElementById('ingredient-list');
-    if (!list) return;
-
-    // Clear the current list
-    list.innerHTML = '';
-    
-    // Add each ingredient as a list item
-    this.userIngredients.forEach(id => {
-      const li = document.createElement('li');
-      li.className = 'ingredient-item';
-      
-      // Get the display name for the ingredient
-      const name = this.getIngredientName(id);
-      
-      // Create HTML with ingredient name and remove button
-      li.innerHTML = `
-        <span>${name}</span>
-        <button class="remove-btn" onclick="ingredientManager.removeIngredient('${id}')">×</button>
-      `;
-      
-      list.appendChild(li);
-    });
+    // Convert Map to array of entries for JSON storage
+    localStorage.setItem('userIngredients', 
+      JSON.stringify([...this.userIngredients.entries()]));
   }
 
   /**
    * Gets the display name for an ingredient by ID
-   * Looks in both standard and custom ingredients
+   * Looks in both stored names, standard and custom ingredients
    * @param {string} id - The ID of the ingredient to find
    * @returns {string} The display name of the ingredient
    */
   getIngredientName(id) {
-    // First check in dropdown options (standard ingredients)
-    const select = document.getElementById('ingredient-select');
-    const option = select?.querySelector(`option[value="${id}"]`);
-    if (option && option.value !== 'manual') return option.textContent;
+    // First check if we have a stored name
+    if (this.userIngredients.has(id)) {
+      return this.userIngredients.get(id);
+    }
+    
+    // Then check in dropdown options (standard ingredients)
+    const name = this.getDropdownName(id);
+    if (name) return name;
 
     // Then check in custom ingredients
     for (const ingredients of Object.values(this.customIngredients)) {
@@ -357,7 +690,9 @@ class IngredientManager {
   showManualPopup() {
     const popup = document.getElementById('manual-ingredient-popup');
     if (popup) {
-      popup.style.display = 'flex';
+      // Use Bootstrap's Modal API instead of changing style directly
+      const bootstrapModal = new bootstrap.Modal(popup);
+      bootstrapModal.show();
       document.getElementById('new-ingredient-name')?.focus();
     }
   }
@@ -367,7 +702,14 @@ class IngredientManager {
    * Resets the form and dropdown
    */
   closeManualPopup() {
-    document.getElementById('manual-ingredient-popup')?.style.setProperty('display', 'none');
+    const popup = document.getElementById('manual-ingredient-popup');
+    if (popup) {
+      // Use Bootstrap's Modal API to hide
+      const bootstrapModal = bootstrap.Modal.getInstance(popup);
+      if (bootstrapModal) {
+        bootstrapModal.hide();
+      }
+    }
     document.getElementById('manual-ingredient-form')?.reset();
     document.getElementById('ingredient-select').value = '';
   }

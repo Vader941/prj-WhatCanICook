@@ -6,7 +6,7 @@
 export const applianceCategories = {
   // Basic kitchen equipment most homes have
   "Basic Equipment": [
-    "Stove/Range",   // For stovetop cooking
+    "Stove",   // For stovetop cooking
     "Oven",          // For baking and roasting
     "Microwave",     // For quick heating and defrosting
     "Refrigerator",  // For cold storage
@@ -21,13 +21,14 @@ export const applianceCategories = {
     "Stand Mixer",    // For baking and dough
     "Hand Mixer",     // Portable alternative to stand mixer
     "Coffee Maker",   // For brewing coffee
-    "Electric Kettle" // For boiling water quickly
+    "Electric Kettle", // For boiling water quickly
+    "Hot Plate"        // For additional cooking surface
   ],
   
   // Less common specialized appliances
   "Specialty Appliances": [
-    "Slow Cooker/Crock Pot",     // For slow, low-heat cooking
-    "Instant Pot/Pressure Cooker", // For fast pressure cooking
+    "Crock Pot",     // For slow, low-heat cooking
+    "Pressure Cooker", // For fast pressure cooking
     "Air Fryer",                  // For oil-free "frying"
     "Rice Cooker",                // For perfect rice
     "Waffle Maker",               // For waffles
